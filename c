@@ -1,4 +1,4 @@
-gcc $1 -o $2
+gcc $1 -lm -o $2
 echo -e "\n"
 ./$2
 echo -e "\n"
