@@ -6,7 +6,7 @@ int main(){
         scanf("%d", &opseg);
     }
     while (opseg>100 || opseg<3);
-    for(i=3; i<=opseg; i++){
+    for(i=4; i<=opseg; i++){
         if(i%4==0){
             printf("%d ", i);
         }
