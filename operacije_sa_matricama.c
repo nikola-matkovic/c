@@ -12,51 +12,85 @@ int operacija, m, n;
     scanf("%d",&m);
     printf("koliko matrica ima kolona? ");
     scanf("%d",&n);    
-    int i,j, niz[m][n], niz2[m][n], niz3[m][n], s;
-    //kod za zbir
-    if(operacija==1 || operacija==2 || operacija==3){
+    int i,j, niz[m][n], niz2[m][n], niz3[m][n], s, p;
+    //koja god da je operacija, korisnik  će morati da unese prvu matricu
+    i=0;
+    while(i<m){
+        j=0;
+        printf("unesite vrstu %d:\n ", i+1);
+        while(j<n){
+            scanf("%d", &niz[i][j]);
+            j++;
+        }
+        i++;
+    }
+    //kod za sabiranje i oduzimanje
+    if(operacija==1 || operacija==2){
+        printf("****Sada unesite drugu matricu******** \n");
         i=0;
         while(i<m){
             j=0;
             printf("unesite vrstu %d:\n ", i+1);
             while(j<n){
-                scanf("%d", &niz[i][j]);
+                scanf("%d", &niz2[i][j]);
                 j++;
             }
             i++;
         }
-        if(operacija==1 || operacija==2){
-            printf("****Sada unesite drugu matricu******** \n");
-            i=0;
-            while(i<m){
-                j=0;
-                printf("unesite vrstu %d:\n ", i+1);
-                while(j<n){
-                    scanf("%d", &niz2[i][j]);
-                    j++;
-                }
-                i++;
-            }
-        }
     }
-    if(operacija==1){
+    else if(operacija==4){
+        //unos prve  mxn je obavljen
+        //unos druge nxp
+        //treca ce biti mxp
+        printf("Koliko kolona ima druga matrica?");
+        scanf("%d", &p);
+        printf("****Sada unesite drugu matricu******** \n");
+        i=0;
+        while(i<n){
+            j=0;
+            printf("unesite vrstu %d:\n ", i+1);
+            while(j<p){
+                scanf("%d", &niz2[i][j]);
+                j++;
+            }
+            i++;
+        }
+        //kod ispod je radi testa, i treba ga obrisati!!! 
+        printf("Prva matrica:\n");
+        while(i<m){
+            j=0;
+            while(j<n){
+                printf("%d ", niz[i][j]);
+                j++;
+            }
+            printf("\n");
+            i++;
+        }
+        printf("Druga matrica:\n");
+        i=0;
+        while(i<n){
+            j=0;
+            while(j<p){
+                printf("%d ", niz2[i][j]);
+                j++;
+            }
+            printf("\n");
+            i++;
+        }
+
+
+        // kraj koda za testirnje
+    }
+    if(operacija==1 || operacija==2 ){
         i=0;
         j=0;
         while(i<m){
             j=0;
             while(j<n){
-                niz3[i][j]=niz[i][j]+niz2[i][j];
-                j++;
-            }
-            i++;
-        }
-    }
-    else if (operacija==2){
-        i=0;
-        j=0;
-        while(i<m){
-            while(j<n){
-                niz3[i][j]=niz[i][j]-niz2[i][j];
+                if(operacija==1)
+                    niz3[i][j]=niz[i][j]+niz2[i][j];
+                else 
+                    niz3[i][j]=niz[i][j]-niz2[i][j];
                 j++;
             }
             i++;
@@ -115,7 +149,7 @@ int operacija, m, n;
         while(i<m){
             j=0;
             while(j<n){
-                printf("%d", niz3[i][j]);
+                printf("%d ", niz3[i][j]);
                 j++;
             }
             printf("\n");
