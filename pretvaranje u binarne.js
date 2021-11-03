@@ -1,4 +1,4 @@
-var broj= 2
+var broj= 256
 var s="";
 var niz=[]
 while(broj>0){
