@@ -131,8 +131,11 @@ int main(){
     }
     else{
         int niz4[n][p];
-        i=0;
-        //niz1 = m*n  // niz2 = n*p , niz4 m*p;
-        
+        int a, b, k, l, x y, t; // niz1[a][b] 
+        t=0; a=1; b=1; k=1; l=1; x=1; y=1;
+            
+            t+= niz[1][1] * niz2[1][1]; 
+            t+= niz[1][2] * niz2[2][2];
         }
+
 }
