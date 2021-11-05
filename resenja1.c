@@ -1,4 +1,4 @@
-//1. Sa tastature se učitava prirodan broj ni zatim n prirodnih brojeva među kojima su bar dva različita. 
+//1. Sa tastature se učitava prirodan broj "n" i zatim n prirodnih brojeva među kojima su bar dva različita. 
 //Napisati program koji jednim prolaskom kroz niz određuje drugu po veličini vrednost.
 // Na primer za pet brojeva 6, 6, 7, 6, 2 ispisuje: Druga po veličini vrednost je 6
 #include <stdio.h>
@@ -7,30 +7,26 @@ int main(){
     do{
     printf("unesite broj n=");
     scanf("%d",&n);
+    printf("N je jedanko : %d \n", n);
     }
-    while(n<2);
+    while(n<2); 
     int niz[n];
-    do{
-        printf("Unosite broj jedan po 1:\n");
+    //do{
+        printf("Unosite broj jedan po jedan:\n");
         najveci=0;
         prethodni=0;
         for(i=0;i<n; i++){
             scanf("%d",&niz[i]);
-            //proveriti  da li postoje 2 različita broja, ako ne, ponvoiti do  petlju.
-
-
-
-            t=najveci; //najveći pre if naredbe
-            if(niz[i]>najveci){
+            if(n==2)
+                najveci==niz[i];
+            if(najveci<niz[i]){
+                prethodni=najveci;
                 najveci=niz[i];
             }
-            //provera da li se najveći promenio:
-            if(najveci!=t){
-                prethodni=t;
-            }
         }
-    }
-    while(dva_razlicita==0);
-    printf("Resenje: %d %d", prethodni);
+    //}
+    //while(dva_razlicita==0);
+    printf("Resenje: %d", prethodni);
     return 0;
 }
+//Program nije gotov!!! radi za 1-2 ne za 2-1
