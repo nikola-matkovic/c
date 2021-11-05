@@ -1,3 +1,5 @@
+//sabiranje 2 broja
+
 #include <stdio.h>
 
 int main(){

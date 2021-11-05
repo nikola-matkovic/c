@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 int main(){
     int operacija, m, n, i, j , s, p; 
     do{// odabir operacije 
@@ -16,6 +15,7 @@ int main(){
     printf("koliko matrica ima kolona? ");
     scanf("%d",&n);
     int niz[m][n], niz2[m][n], niz3[m][n];
+    i=0;
     while(i<m){
         j=0;
         printf("unesite vrstu %d:\n ", i+1);
@@ -65,17 +65,65 @@ int main(){
         }
     }
     else{
+        //unos za 4:
         printf("Koliko kolona ima druga matrica?");
         scanf("%d", &p);
+        int niz4[n][p];
         printf("****Sada unesite drugu matricu******** \n");
         i=0;
-        while(i<n){
+        while(i<n){               // a[mxn] b[nxp]   c=m*p
             j=0;
             printf("unesite vrstu %d:\n ", i+1);
             while(j<p){
-                scanf("%d", &niz2[i][j]);
+                scanf("%d", &niz4[i][j]);
                 j++;
             }
+            i++;
+        }
+        //računanje
+        int niz5[n][p];
+        int k, l,t; 
+        for(l=0; l<n; l++){
+            for(k=0; k<p; k++) {
+                t=0;
+                for(i=0; i<n; i++){
+                    t+= niz[l][i] * niz4[i][k];
+                }
+                niz5[l][k]=t;
+            }
+        }
+        //ispis
+        int i=0;
+        printf("Prva matrica:\n");
+        while(i<m){
+            j=0;
+            while(j<n){
+                printf("%d ", niz[i][j]);
+                j++;
+            }
+            printf("\n");
+            i++;
+        }
+        i=0;
+        printf("Druga matrica :\n");
+        while(i<n){
+            j=0;
+            while(j<p){
+                printf("%d ", niz4[i][j]);
+                j++;
+            }
+            printf("\n");
+            i++;
+        }
+        printf("Rešenje: \n");
+        i=0;
+        while(i<m){
+            j=0;
+            while(j<p){
+                printf("%d ", niz5[i][j]);
+                j++;
+            }
+            printf("\n");
             i++;
         }
     }
@@ -129,13 +177,4 @@ int main(){
             i++;
         }
     }
-    else{
-        int niz4[n][p];
-        int a, b, k, l, x y, t; // niz1[a][b] 
-        t=0; a=1; b=1; k=1; l=1; x=1; y=1;
-            
-            t+= niz[1][1] * niz2[1][1]; 
-            t+= niz[1][2] * niz2[2][2];
-        }
-
 }

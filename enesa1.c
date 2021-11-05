@@ -1,3 +1,4 @@
+//ispis na ekran
 #include  <stdio.h>
 
 int main(){
