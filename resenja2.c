@@ -44,7 +44,6 @@ int main(){
         scanf(" %c", &c);
         switch(c){
             case 'K':
-                printf("")
                 break;
             case 'A':
                 if(x!=0){
@@ -53,19 +52,22 @@ int main(){
                 }
                 break;
             case 'D':
-                    if(x!=m-1)
+                    if(x!=m-1){
                         x++;
                         broj_skokova++;
+                    }
                 break;
             case 'S':
-                    if(y!=m-1)
+                    if(y!=m-1){
                         y++;
                         broj_skokova++;
+                    }
                 break;
             case 'W':
-                if(y!=0)
+                if(y!=0){
                     y--;
                     broj_skokova++;
+                }
                 break;
             default:
                 printf("pogrešan unos \n");
