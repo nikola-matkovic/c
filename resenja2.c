@@ -30,43 +30,51 @@ int main(){
         }
         i++;
     }
+    int x, y, broj_skokova, kupus;
+    x=0;  y=0, broj_skokova=0; kupus=0;
+    
+    char c;
     printf("trenutno ste na polju 0X0\n");
     printf("Unesite A za Pokret LEVO\n");
     printf("unesite F za pokret DESNO\n");
     printf("Unesite W za pokret GORE \n");
     printf("unesite S za pokret DOLE\n");
     printf("unesite K za KRAJ\n");
-    char c;
-    int x, y;
-    x=0;
-    y=0;
     do{
-        scanf("%c", &c);
+        scanf(" %c", &c);
         switch(c){
+            case 'K':
+                printf("")
+                break;
             case 'A':
-                if(!x-1<0){
+                if(x!=0){
                     x--;
+                    broj_skokova++;
                 }
                 break;
             case 'D':
-                if(x+1>m){
-                    x++;
-                }
-                break;
-            case 'W':
-                if(!x-1<0){
-                    y--;
-                }
+                    if(x!=m-1)
+                        x++;
+                        broj_skokova++;
                 break;
             case 'S':
-                if(x+1>m){
-                    y++;
-                }
+                    if(y!=m-1)
+                        y++;
+                        broj_skokova++;
+                break;
+            case 'W':
+                if(y!=0)
+                    y--;
+                    broj_skokova++;
                 break;
             default:
                 printf("pogrešan unos \n");
         }
-        printf("x=%d  y=%d\n", x, y);
+        if(matrica[x][y]==0){
+            kupus++;
+            matrica[x][y]=3;
+        }
+        printf("x=%d  y=%d\n, broj skokova= %d, broj_pojedenih_kupusa= %d", x, y, broj_skokova, kupus);
     }
-    while(c!='k');
+    while(c!='K');
 }
