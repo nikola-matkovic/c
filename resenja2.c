@@ -10,6 +10,7 @@
     Prekinuti sa unosom kada korisnik unese karakter K. Za unos matrice i unos koraka odraditi posebne funkcije.
 */
 
+// sve radi samo prebaciti u posebne funkcije (zadnji red zadatka)
 #include <stdio.h>
 int main(){
     int n, i, j, m;
@@ -34,16 +35,17 @@ int main(){
     x=0;  y=0, broj_skokova=0; kupus=0;
     
     char c;
-    printf("trenutno ste na polju 0X0\n");
     printf("Unesite A za Pokret LEVO\n");
     printf("unesite F za pokret DESNO\n");
     printf("Unesite W za pokret GORE \n");
     printf("unesite S za pokret DOLE\n");
     printf("unesite K za KRAJ\n");
     do{
+        printf("trenutno ste na polju %d %d\n", x, y);
         scanf(" %c", &c);
         switch(c){
             case 'K':
+                printf("Broj pojedenih kupusa: %d \nZeka je skočio %d puta.", kupus, broj_skokova);
                 break;
             case 'A':
                 if(x!=0){
@@ -72,11 +74,16 @@ int main(){
             default:
                 printf("pogrešan unos \n");
         }
-        if(matrica[x][y]==0){
+        if(matrica[y][x]==0){
             kupus++;
-            matrica[x][y]=3;
+            matrica[y][x]=3;
         }
-        printf("x=%d  y=%d\n, broj skokova= %d, broj_pojedenih_kupusa= %d", x, y, broj_skokova, kupus);
+        for(i=0; i<m; i++){
+            for(j=0; j<m; j++){
+                printf("%d ", matrica[i][j]);
+            }
+            printf("\n");
+        }
     }
     while(c!='K');
 }
