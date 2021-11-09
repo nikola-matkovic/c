@@ -5,13 +5,13 @@
 int main(){
     int n, i, prethodni, najveci, najmanji;
 
-    do{
-    printf("unesite broj n=");
-    scanf("%d",&n);
-    printf("N je jedanko : %d \n", n);
-    }
-    while(n<2); 
-
+    // do{
+    // printf("unesite broj n=");
+    // scanf("%d",&n);
+    // printf("N je jedanko : %d \n", n);
+    // }
+    // while(n<2); 
+    n=2;
 
     int niz[n];
     do{
@@ -26,12 +26,15 @@ int main(){
                 if(niz[i]<najmanji){
                     najmanji=niz[i];
                 }
-                if(niz[i]>najveci){
-                    prethodni=najveci;
-                    najveci=niz[i];
-                }
-                else if(niz[i]>prethodni){
-                    prethodni=niz[i];
+                if(niz[i]>prethodni){
+                    if(niz[i]<najveci ){
+                        prethodni=niz[i];
+                    }
+                    else{
+                        prethodni=najveci;
+                        najveci=niz[i];
+                        
+                    }
                 }
                 if(i==1){
                     prethodni=najmanji;
