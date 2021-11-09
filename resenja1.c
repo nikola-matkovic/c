@@ -4,15 +4,13 @@
 #include <stdio.h>
 int main(){
     int n, i, prethodni, najveci, najmanji;
-
     // do{
     // printf("unesite broj n=");
     // scanf("%d",&n);
     // printf("N je jedanko : %d \n", n);
     // }
     // while(n<2); 
-    n=2;
-
+    n=3;
     int niz[n];
     do{
         printf("Unosite broj jedan po jedan:\n");
@@ -26,16 +24,14 @@ int main(){
                 if(niz[i]<najmanji){
                     najmanji=niz[i];
                 }
-                if(niz[i]>prethodni){
-                    if(niz[i]<najveci ){
-                        prethodni=niz[i];
-                    }
-                    else{
-                        prethodni=najveci;
-                        najveci=niz[i];
-                        
-                    }
+                if(niz[i]>najveci){
+                    prethodni=najveci;
+                    najveci=niz[i];
                 }
+                else if(niz[i]!=najveci && niz[i]>prethodni){
+                    prethodni=niz[i];
+                }
+
                 if(i==1){
                     prethodni=najmanji;
                 }
