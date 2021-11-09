@@ -30,6 +30,9 @@ int main(){
                     prethodni=najveci;
                     najveci=niz[i];
                 }
+                else if(niz[i]>prethodni){
+                    prethodni=niz[i];
+                }
                 if(i==1){
                     prethodni=najmanji;
                 }
