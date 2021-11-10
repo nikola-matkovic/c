@@ -4,12 +4,11 @@
 #include <stdio.h>
 int main(){
     int n, i, prethodni, najveci, najmanji;
-    // do{
-    // printf("unesite broj n=");
-    // scanf("%d",&n);
-    // printf("N je jedanko : %d \n", n);
-    // }
-    // while(n<2); 
+    do{
+    printf("unesite broj n=");
+    scanf("%d",&n);
+    }
+    while(n<2); 
     n=3;
     int niz[n];
     do{
@@ -17,28 +16,32 @@ int main(){
         for(i=0;i<n; i++){
             scanf("%d",&niz[i]);
             if(i==0){
+                prethodni=niz[i];
                 najveci=niz[i];
                 najmanji=niz[i];
             }
             else{
                 if(niz[i]<najmanji){
                     najmanji=niz[i];
+                    if(najveci==prethodni){
+                        prethodni=najmanji;
+                    }
                 }
-                if(niz[i]>najveci){
+                else if(niz[i]>najveci){
                     prethodni=najveci;
                     najveci=niz[i];
-                }
-                else if(niz[i]!=najveci && niz[i]>prethodni){
+                }                
+                else if(niz[i]>najmanji && niz[i]>prethodni && niz[i]!=najveci){
                     prethodni=niz[i];
                 }
-
                 if(i==1){
                     prethodni=najmanji;
                 }
             }
-            printf("najveći broj je %d a najmanji je %d. Prethodni od najvećeg je %d \n", najveci, najmanji, prethodni);
+            
         }
     }
     while(najmanji==najveci);
+    printf("Druga po veličini vrednost je:  %d  \n", prethodni);
     return 0;
 }
