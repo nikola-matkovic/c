@@ -1,0 +1,1 @@
+print("tarik \n"*5)
