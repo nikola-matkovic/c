@@ -1,0 +1,30 @@
+//i ima prednost nad ili
++ logičko sabiranje     OR
+* logičko  množenje     AND 
+- UNARNI   negacija     NOT 
+
+
+PRAVILA :
+
+x + y = y + x          X OR  y = y OR  X
+x * y = y * x          x AND y = y AND x
+X*(y+z)= x*y + x*z     x AND (Y OR Z) = X OR Y AND X OR z
+X+(Y*Z)=(X+Y)*(X+Z)    X OR (Y AND Z) = (X OR Y) AND (X OR Z)
+X + 0 = 0 + X = X      X OR 0 = O OR X = X 
+X * 1 = 1 * X = X      X AND 1 = 1 AND X = X
+//INVERZNI ELEMENT // x podvučeno = {x}
+x + {x} = 1            x OR {x} = 1
+x * {x} = 0            x ADN {x} = 0
+x + x = x              X OR X = X
+x * x = x              x and x = x
+X + 1 = 1              x OR 1 = 1
+x * 0 = 0              x AND 0 = 0 
+{{x}}=X                !( !(x)) = X
+//ABSORPCIJA
+X + x * y = x          x OR x and y = X
+x * (x + y) = x        x AND (X OR Y) = X
+//ASOCIJATIVNOS
+X+(Y+Z)=(X + Y) + Y    X OR (Y OR Z) = (X + Y) + z
+//DE-MORGONOVI ZAKONI 
+{(X+Y)} = {X}*{Y}      !(X OR Y) = !X AND !Y
+{X * Y} = {X}+{Y}      !(X AND Y) = !X OR !Y
