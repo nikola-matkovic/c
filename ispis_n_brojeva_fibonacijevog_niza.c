@@ -15,6 +15,5 @@ int main(){
         prva=rezultat;
         printf("%d ", rezultat);
     }
-
     return 0;
 }
