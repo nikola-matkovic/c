@@ -5,15 +5,15 @@
 //prva== rezultat;
 int main(){
     printf("unesite koliko brojeva fibonacijvog niza želite");
-    int n, i;
+    long n, i;
     scanf("%d",&n);
-    int prva=1, druga=1, rezultat=0 ;
+    long prva=1, druga=1, rezultat=0 ;
     printf("%d %d ", prva, druga);
     for(i=3; i<=n; i++){
         rezultat=prva+druga;
         druga=prva;
         prva=rezultat;
-        printf("%d ", rezultat);
+        printf("%ld ", rezultat);
     }
 
     return 0;
