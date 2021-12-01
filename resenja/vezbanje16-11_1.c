@@ -15,5 +15,5 @@ void main(){
             }
         if(s==i)
             printf("Broj %ld je savršen \n", i);
-        }
     }
+}

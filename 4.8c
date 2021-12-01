@@ -1,0 +1,10 @@
+#include <stdio.h>
+
+int main(){
+    int m, n;
+    printf("Unesite brojeve m i n: \n");
+    scanf("%d %d", m, n);
+
+
+    return 0;
+}
