@@ -9,7 +9,7 @@ int main(){
     n2=100;
     n3=1;
     printf("Unesite broj :");  // predpostavimo da smo uzeli 1763
-    scanf("%d %d",&broj,&t);
+    scanf("%d",&broj);
     t=broj/n1;
     printf("Novcanica od 500din se u vrednosti proizvoda nalazi %d puta\n",t);
     t=(broj%n1)/n2;
