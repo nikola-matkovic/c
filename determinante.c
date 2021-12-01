@@ -60,11 +60,8 @@ int main(){
         scanf(" %d %d", &h, &v );       // h ------      v|||||
         for(i=0; i<n-1; i++){
             for(j=0; j<n-1; j++){
-                if(h-1>i && v-1>j){
+                if(h-1>i && v-1>j){           // h= 3            v=3       2>i      2>j
                     t=niz[i][j];
-                }
-                else if(h-1<=i && v-1>j){
-                    t=niz[i+1][j];
                 }
                 niz3[i][j]=t;
             }
