@@ -1,0 +1,18 @@
+`...${ime} ... ${ime}... `
+for(let i=0; i<n; i++){}
+for(key in object){}
+niz.foreach(funkcija) funckija(value, index, array)
+for(key of iterable)  //za sve iterable stvari, element po el. npr string.
+const skup = new set([1,2....])
+set.add(), .delete(), has(), foreach(), values(), size
+const mapa = new map(array)
+set(), get(), delete(), has(), forEach(), entries(), size
+try{  /*opcionalno if(greska) throw "nesto"*/ } catch(err){....=err.message}finally{}
+"use strick"
+array.forEach((el)=>{})
+class Klasa{
+    constructor(){
+        this.p=v; //...
+    }
+    druge_metode(a,a){}
+}
