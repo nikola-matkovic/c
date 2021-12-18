@@ -4,5 +4,5 @@ int main(){
     int x;
     printf("unesite broj za proveru");
     scanf("%d",&x);
-    x & (x - 1) || printf("da");
+    x & (x-1) || printf("jeste");
 }
