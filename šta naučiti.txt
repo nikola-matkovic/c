@@ -1,0 +1,33 @@
+let/var/const
+
+sa const definišem bukvalno sve što se  ne menja
+funkcije, nizove, itd.
+mougće je menjati elemente
+** je dozvoljeno
+
+//proveriti funkcije za konst i sl
+const za objekte ; za kraj 
+== i === za objekte vraćaju 0.
+
+for(let i=0; i<n; i++){}
+for(key in object){}   //   primer for(x in osoba){x su sve vrednosti}
+niz.foreach(funkcija) funckija(value, index, array)
+for(key of iterable)  //za sve iterable stvari, element po el. npr string.
+!!!!object nije iterable.
+const skup = new set([1,2....])
+const mapa = new map([...]); //mapa je kao objekat, samo ključ može biti šta god.iterable.
+try{pokuša, može se baciti throw "nešto" što će biti kod greške}
+catch(err){innerHTML= err}
+finally{...}
+"use strick"
+array.forEach((el)=>{})
+()=>{}
+razmak iza operatora, 2 space-a  umesto \t
+dužina_linija<80,  { nakon (), ne u \n.
+kratki objekti = {i:"v", i:"v"}
+dugi objekti = {
+    i : "v",
+    i : "v,
+};
+što više === umesto ==
+swich završiti sa default i kad ne treba.
