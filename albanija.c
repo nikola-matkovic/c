@@ -7,5 +7,5 @@ int main(){
 	scanf("%s", nacija );
 	printf("Unesite ime:");
 	scanf("%s", ime);
-	printf("Vi se zovete  %s, i vaša nacionalna pripadnost je srpska, samo vam niko nije rekao!, svi ste vi srbi breeeeeee", ime, nacija);
+	printf("Vi se zovete  %s, i vaša nacionalna pripadnost je srpska, samo vam niko nije rekao!, svi ste vi srbi breeeeeee", ime);
 }
