@@ -9,7 +9,7 @@ int main(){
     //gets(puno_ime); //Nije bezbedna funkcija, treba koristiti fgets
     //printf("%s", puno_ime);
     // sa fgets:
-    fgets(puno_ime, MAX, stdin);
+    fgets(puno_ime, MAX, stdin);  
     printf("%s", puno_ime);
 	return 0;
 }
