@@ -8,35 +8,35 @@ typedef struct temperature
 } TEMPERATURE;
 main()
 {
- TEMPERATURE temp[10];
- int i, j, uk7=0, uk13=0, uk19=0, pomd;
- float pr7, pr13, pr19, prdnevna[10], pom;
- FILE *ulaz, *izlaz;
- char ime1[20], ime2[20];
- printf("\n Ime datoteke sa podacima: ");
- scanf("%s",&ime1);
- printf(" Ime datoteke za kreiranje: ");
- scanf("%s",&ime2);
- if((ulaz=fopen(ime1, "r"))== NULL)
- {
- printf("Greska prilikom otvaranja datoteke!\n");
- return 1;
- }
- if((izlaz=fopen(ime2, "w"))== NULL)
- {
- printf("Greska prilikom otvaranja datoteke!\n");
- return 1;
- }
- /*Citanje podataka iz datoteke*/
- /*Racunanje ukupnih temperatura u 7h, 13h i 19h i dnevne prosecne temperature*/
- for(i=0; i<10; i++)
- {
- fscanf(ulaz, "%d%d%d%d", &temp[i].datum, &temp[i].m7,
- &temp[i].m13, &temp[i].m19);
- uk7+=temp[i].m7;
- uk13+=temp[i].m13;
- uk19+=temp[i].m19;
- prdnevna[i]=(float)(temp[i].m7 + temp[i].m13 + temp[i].m19)/3;
+    TEMPERATURE temp[10];
+    int i, j, uk7=0, uk13=0, uk19=0, pomd;
+    float pr7, pr13, pr19, prdnevna[10], pom;
+    FILE *ulaz, *izlaz;
+    char ime1[20], ime2[20];
+    printf("\n Ime datoteke sa podacima: ");
+    scanf("%s",&ime1);
+    printf(" Ime datoteke za kreiranje: ");
+    scanf("%s",&ime2);
+    if((ulaz=fopen(ime1, "r"))== NULL)
+    {
+    printf("Greska prilikom otvaranja datoteke!\n");
+    return 1;
+    }
+    if((izlaz=fopen(ime2, "w"))== NULL)
+    {
+    printf("Greska prilikom otvaranja datoteke!\n");
+    return 1;
+    }
+    /*Citanje podataka iz datoteke*/
+    /*Racunanje ukupnih temperatura u 7h, 13h i 19h i dnevne prosecne temperature*/
+    for(i=0; i<10; i++)
+    {
+    fscanf(ulaz, "%d%d%d%d", &temp[i].datum, &temp[i].m7,
+    &temp[i].m13, &temp[i].m19);
+    uk7+=temp[i].m7;
+    uk13+=temp[i].m13;
+    uk19+=temp[i].m19;
+    prdnevna[i]=(float)(temp[i].m7 + temp[i].m13 + temp[i].m19)/3;
  }
  /*Racunjane prosecnih temperatura u 7h, 13h i 19h*/
  pr7=(float)uk7/10;
