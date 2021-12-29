@@ -1,0 +1,44 @@
+    body {
+        margin: 0;
+        display: flex;
+        justify-content: space-evenly;
+        background-size: cover;
+        background-attachment: fixed;
+        background-image: url(slike/background.jpg);
+        background-repeat: no-repeat;
+    }
+    
+    .parent {
+        border: 5px;
+        border-style: hidden solid hidden solid;
+        width: 1000px;
+        height: 100vh;
+        background-color: rgba(116, 189, 238, 0.37);
+    }
+    
+    .child1 {
+        width: 1000px;
+        height: 100px;
+        background-color: black;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    .sivi {
+        background-color: rgba(138, 138, 138, 0.774);
+        width: 1300px;
+        height: 50px;
+        margin-bottom: -15px;
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .prijava,
+    p {
+        font-family: monospace;
+        color: white;
+        width: 1000px;
+        height: 15px;
+        text-align: right;
+    }
