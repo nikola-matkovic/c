@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>FLEKSANJE</title>
+    <style>
+        #kontejner {
+            background: rgb(0, 153, 255);
+            width: 400px;
+            height: 200px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        
+        #kontejner div {
+            width: 100px;
+            height: 100px;
+            border: 3px solid black;
+        }
+        
+        body {
+            width: calc(100% - 4px);
+            height: calc(100vh - 4px);
+            margin: 0;
+            border: 2px solid red;
+        }
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="kontejner">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+
+</html>

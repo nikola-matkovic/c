@@ -14,7 +14,8 @@ int main(){
     float c,n,k;
     printf("Uneti ,n i k:");
     scanf("%f %f",&n,&k);
-    n=int faktorijal(n);
-    k=int fakorijal(k);
+    c=faktorijal(n)/faktorijal(k)*(n-k);
+    printf("c=%d",c);
+    return 0;    
     
 }

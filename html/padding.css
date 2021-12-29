@@ -1,0 +1,15 @@
+p {
+    background-color: cornflowerblue;
+    color: cornsilk;
+    margin: 10px 20px 30px 40px;
+    /* t r b l */
+    margin: 10px;
+    /* all 4 sides */
+    margin: 10px 20px 30px;
+    /* t rl b */
+    padding: 10px 20px 30px;
+    /*
+    padding-top, padding-right, padding-botton
+    padding-left
+    */
+}

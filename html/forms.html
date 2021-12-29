@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="forms.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+
+<body>
+    <form action="unos.php" method="GET">
+        <div>
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" placeholder="korisničko ime.." required>
+        </div>
+        <div>
+            <label for="age">Age</label>
+            <input type="number" name="age" id="age" min="1" max="100" step="5">
+        </div>
+        <div>
+            <label for="date">Birthday</label>
+            <input type="date" name="date" id="date" min="2002-08-12">
+        </div>
+        <div>
+            <label for="password">Password</label>
+            <input type="password" name="password" placeholder="sifra.." required>
+        </div>
+
+        <div>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="unesite email" required>
+        </div>
+
+        <div>Favourite movie
+        </div>
+        <div>
+            <label for="Horror">Horror</label>
+            <input type="checkbox" name="Horror" id="Horror">
+
+        </div>
+        <div>
+            <label for="Action">Action</label>
+            <input type="checkbox" name="Action" id="Action">
+
+        </div>
+        <div>
+            <label for="Comedy">Comedy</label>
+            <input type="checkbox" name="Comedy" id="Comedy">
+
+        </div>
+        <div id="gender">
+            Gender
+        </div>
+        <div>
+            <label for="Male">Male</label>
+            <input type="radio" name="gender" id="male" value="male">
+        </div>
+
+        <div>
+            <label for="Male">Female</label>
+            <input type="radio" name="gender" id="female" value="female">
+        </div>
+        <div>
+
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </div>
+        <div>
+            <label for="eyeColor">Eye Color</label>
+            <select name="eyeColor" id="eyeColor">
+                <option value="Green">Green</option>
+                <option value="Red">Red</option>
+                <option value="Blue">Blue</option>
+            </select>
+
+        </div>
+        <div>
+            <label for="bio">Bio</label>
+            <textarea name="bio" id="bio">My name is Tarik</textarea>
+        </div>
+
+        <div><label for="file">File</label>
+            <input type="file" id="file" name="file">
+        </div>
+        <div>
+            <label for="phone">Phone</label>
+            <input type="tel" name="phone" id="phone" placeholder="enter phone number" required>
+        </div>
+        <div>
+            <label for="url">URL</label>
+            <input type="url" name="url" id="url">
+        </div>
+        <div>
+            <label for="color">Color</label>
+            <input type="color" name="color" id="color">
+        </div>
+
+
+    </form>
+
+</body>
+
+</html>
