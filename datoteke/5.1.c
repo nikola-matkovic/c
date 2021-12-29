@@ -5,6 +5,7 @@
 */
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 int main(){
     FILE * dat;
@@ -12,6 +13,7 @@ int main(){
     dat = fopen("podaci.txt", "w");
     if(dat == NULL){
         printf("Greška prilikom otvaranja datoteke");
+        exit(1);
     }
     for(i = 1; i<=10; i++){
         fprintf(dat, "%d\n", i);
@@ -20,6 +22,7 @@ int main(){
     dat = fopen("podaci.txt", "r");
     if(dat == NULL){
         printf("Greška prilikom otvaranja datoteke");
+        exit(1);
     }
     while (1)
     {
