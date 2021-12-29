@@ -7,22 +7,23 @@
 #include <stdlib.h>
 
 int main(){
-    int br, temp, i, cifra, semafor;
+    int br, temp, cifra, semafor;
     FILE *dat1, *dat2;
     if((dat1 = fopen("brojeviX.txt", "r"))==NULL){
         printf("Greška pri otvaranju datoteke brojeviX.txt");
         exit(1);
     }
-    if((dat1 = fopen("brojeviY.txt", "w"))==NULL){
+    if((dat2 = fopen("brojeviY.txt", "w"))==NULL){
         printf("Greška pri otvaranju datoteke brojeviY.txt");
         exit(1);
     }
     while (fscanf(dat1, "%d", &br) !=EOF){
         temp = br;
         semafor = 1;
+        printf("%d \n", temp);
         while (temp != 0){
             cifra = temp % 10;
-            if(cifra != 3 || cifra != 7 ){
+            if(cifra != 3 && cifra != 7 ){
                 semafor = 0;
             }
             temp /= 10;
