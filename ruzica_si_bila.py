@@ -104,8 +104,6 @@ def main():
     printer.hideturtle()
     printer.penup()
     printer.back(200)
-    printer.write("Ružica si bila, Mojaaaaaaaaa\n\n", align="right", font=("Italics", 16, "bold"))
-
     t.exitonclick()
 
 
