@@ -4,6 +4,15 @@ njihove pozicije u matrici. Unos matrice i izračunavanje odraditi pomoću funkc
 
 #include <stdio.h>
 
+void unos(int m, int n){
+    int i;
+    for(i=0; i<m; i++){
+            for(j=0; j<n; j++){
+                scanf("%d", &matrica[i][j]);
+            }
+        }
+}
+
 int main(){
     int m, n, i, j, s, t, br = 0 ;
     float as;
