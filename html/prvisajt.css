@@ -12,8 +12,7 @@
         border: 5px;
         border-style: hidden solid hidden solid;
         width: 1000px;
-        height: 100vh;
-        background-color: rgba(116, 189, 238, 0.37);
+        background-color: #afbfdd;
     }
     
     .crni {
@@ -149,7 +148,7 @@
     .dno {
         width: 100%;
         height: 100px;
-        background-color: rgba(63, 55, 55, 0.212);
+        background-color: #9caac1;
         display: flex;
         align-items: center;
         flex-direction: row;

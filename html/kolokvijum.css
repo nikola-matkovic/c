@@ -1,0 +1,79 @@
+.kolokvijum {
+    width: 100%;
+    height: 50px;
+    border: 1px solid black;
+    background-color: rgb(218, 218, 218);
+    display: flex;
+    align-items: center;
+}
+
+.help {
+    width: 700px;
+    height: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: center;
+}
+
+.glavna-strana {
+    background-color: black;
+    color: white;
+    width: 150px;
+    height: 30px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.o-meni {
+    color: white;
+    background-color: black;
+    width: 80px;
+    height: 30px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.kontakt {
+    background-color: black;
+    color: white;
+    width: 80px;
+    height: 30px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.dodatne-informacije {
+    color: white;
+    background-color: black;
+    width: 200px;
+    height: 30px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+    padding: 10px;
+    border-collapse: collapse;
+}
+
+tr:nth-child(even) {
+    background-color: green;
+}
+
+tr:nth-child(odd) {
+    background-color: greenyellow;
+}
+
+.tabela {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    width:
+}
