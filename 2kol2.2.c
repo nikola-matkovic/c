@@ -4,15 +4,6 @@ njihove pozicije u matrici. Unos matrice i izračunavanje odraditi pomoću funkc
 
 #include <stdio.h>
 
-void unos(int m, int n, matrica){
-    int i;
-    for(i=0; i<m; i++){
-            for(j=0; j<n; j++){
-                scanf("%d", &matrica[i][j]);
-            }
-        }
-}
-
 int main(){
     int m, n, i, j, s, t, br = 0 ;
     float as;
@@ -20,7 +11,11 @@ int main(){
     scanf("%d %d", &m, &n);
     int matrica[m][n];
     //unos matric
-    unos(m,n);
+        for(i=0; i<m; i++){
+            for(j=0; j<n; j++){
+                scanf("%d", &matrica[i][j]);
+            }
+        }
     //ispis matrice
     for(i=0; i<m; i++){
         for(j=0; j<n; j++){
