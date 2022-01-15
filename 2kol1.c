@@ -21,13 +21,13 @@ int main(){
         scanf("%d", &niz[i]);
         i++;
     }
-    for(p=1;p<n; p++){
+    for(p=1;p<n-1; p++){
         sl=0;
         for(l=0; l<p; l++){
             sl += niz[l];
         }
         sd=0;
-        for(d=n-2; d>p; d--){
+        for(d=n-1; d>p; d--){
             sd += niz[d];
         }
         if(sl == sd){
