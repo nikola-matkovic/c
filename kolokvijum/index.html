@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+		crossorigin="anonymous"></script>
+	<title>Kolokvijum</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<nav>
+		<div class="links">
+			<a class="btn btn-dark" href="#">Glavna strana</a>
+			<a class="btn btn-dark" href="#">O meni</a>
+			<a class="btn btn-dark" href="#">Kontakt</a>
+			<a class="btn btn-dark" href="#">Dodatne informacije</a>
+		</div>
+		<div class="naslov">
+			<h3>Kolokvijum</h3>
+		</div>
+		<div class="controls">
+			<input type="text" class="form-control" placeholder="Search">
+			<button class="btn btn-outline-primary">Login</button>
+		</div>
+	</nav>
+
+	<div id="main">
+		<div id="sidebar">
+			<a class="btn btn-info" href="#">Glavni podaci</a>
+			<a class="btn btn-info" href="#">Dodatni podaci</a>
+			<a class="btn btn-info" href="#">Bitni podaci</a>
+			<a class="btn btn-info" href="#">Zanimljivi podaci</a>
+		</div>
+		<div id="content">
+			<div id="omeni">
+				<h3>O meni</h3>
+				<table class="table table-success table-striped">
+					<tr>
+						<th>Ime</th>
+						<td>Omer</td>
+					</tr>
+					<tr>
+						<th>Prezime</th>
+						<td>Omerovic</td>
+					</tr>
+					<tr>
+						<th>Datum rodjenja</th>
+						<td>19.9.1999.</td>
+					</tr>
+					<tr>
+						<th>e-mail</th>
+						<td>omer_o@gmail.com</td>
+					</tr>
+				</table>
+			</div>
+
+			<div id="mesta">
+				<h3>Moja omiljena mesta</h3>
+				<div id="kartice">
+					<div class="card" style="width: 18rem;">
+						<img src="http://epicholiday.rs/wp-content/uploads/2021/01/dubai-skyline-at-dusk-jpg_header-144981-scaled.jpeg"
+							class="card-img-top" alt="...">
+						<div class="card-body">
+							<h5 class="card-title">Dubai</h5>
+							<a href="#" class="btn btn-primary">Vise informacija</a>
+						</div>
+					</div>
+					<div class="card" style="width: 18rem;">
+						<img src="https://www.austrianblog.com/media/images/paris-city-of-love-eiffel-tower.width-1600.jpg"
+							class="card-img-top" alt="...">
+						<div class="card-body">
+							<h5 class="card-title">Pariz</h5>
+							<a href="#" class="btn btn-primary">Vise informacija</a>
+						</div>
+					</div>
+					<div class="card" style="width: 18rem;">
+						<img src="https://sanjatravel.rs/wp-content/uploads/2019/05/london4.jpg" class="card-img-top"
+							alt="...">
+						<div class="card-body">
+							<h5 class="card-title">London</h5>
+							<a href="#" class="btn btn-primary">Vise informacija</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="kontakt">
+				<h3>Kontaktirajte me</h3>
+				<div class="lista">
+					Pri kontaktiranju, slazete se da:
+					<ol>
+						<li>Niste robot</li>
+						<li>Ne koristite pogrbne reci</li>
+						<li>Koristite svoju licnu e-mail adresu</li>
+					</ol>
+				</div>
+				<div class="forma">
+					<div class="mb-3">
+						<label for="exampleFormControlInput1" class="form-label">Email</label>
+						<input type="email" class="form-control" id="exampleFormControlInput1"
+							placeholder="ime@mail.com">
+					</div>
+					<div class="form-check form-switch">
+						<input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"
+							checked>
+						<label class="form-check-label" for="flexSwitchCheckChecked">Zelim da dobijam obavestenja o
+							promenama na sajtu</label>
+					</div>
+					<select class="form-select" aria-label="Default select example">
+						<option selected>Izaberite tip poruke</option>
+						<option value="1">Preporuka</option>
+						<option value="2">Primedba</option>
+						<option value="2">Pohvala</option>
+					</select>
+					<div class="mb-3">
+						<label for="godine" class="form-label">Godine</label>
+						<input type="number" class="form-control" id="godine">
+					</div>
+					<div class="mb-3">
+						<label for="exampleFormControlTextarea1" class="form-label">Poruka</label>
+						<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+					</div>
+					<div class="mb-3">
+						<input type="submit" class="form-control btn btn-success" value="Posalji poruku" id="posalji">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

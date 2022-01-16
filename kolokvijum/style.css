@@ -1,0 +1,78 @@
+		nav {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			background-color: rgb(231, 231, 231);
+		}
+
+		#main {
+			display: flex;
+			flex-direction: row;
+		}
+
+		#sidebar {
+			width: 300px;
+			background-color: whitesmoke;
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+			padding: 40px;
+		}
+
+		#content {
+			flex: 1;
+		}
+
+		.links {
+			padding: 0 40px;
+			display: flex;
+			gap: 24px;
+		}
+
+		.controls {
+			display: flex;
+			gap: 12px;
+			padding: 12px;
+		}
+
+		#omeni {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin: 40px;
+		}
+
+		#omeni table {
+			max-width: 400px;
+		}
+
+		#mesta {
+			margin: 40px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		#kartice {
+			display: flex;
+			flex-direction: row;
+			gap: 30px;
+		}
+
+		#kartice img {
+			max-height: 150px;
+		}
+
+		#kontakt {
+			margin: 40px;
+			display: flex;
+			flex-direction: column;
+			gap: 12px;
+			align-items: center;
+		}
+
+		.forma {
+			display: flex;
+			flex-direction: column;
+			gap: 12px;
+		}
