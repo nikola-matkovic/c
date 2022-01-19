@@ -3,31 +3,31 @@
 рачунање суме кубова, а друга за одређивање да ли је дати број Амстронгов (ако јесте враћа 1, ако
 није враћа 0). */
 
-#include<stdio.h>
-#include<math.h>
+#include <stdio.h>
+#include <math.h>
 
-int suma_kubova(int s){
-    int i;
-    for(i=0;i<=9;i++){
-        for(i=0;i<=9;i++){
-            for(i=0;i<=9;i++){
-
-            }
-        }
-    }
-    s+=pow(i,3);
+int suma_kubova(int n){
+    int prva, druga, treca, s;
+    prva =  n / 100;
+    druga = (n % 100) / 10;
+    treca = n % 10;
+    s = pow(prva, 3) + pow(druga, 3) + pow(treca, 3);
     return s;
-}
-int amstrong(int a){
-    while(a>100 && a<1000){
-        if(a==suma_kubova(a)){
-            return 1;
-        }
-        else return 0;
     }
 
+int proveri(int n){
+    if(n == suma_kubova(n)){
+        return 1;
+    }
+    return 0;
 }
+
 int main(){
-    int a;
-    
+    int n;
+    for(int i=100; i<1000; i++){
+       if(proveri(i)){
+           printf("broj %d je Amstrongov \n", i);
+        }
+    }
+    return 0;
 }
