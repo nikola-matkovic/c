@@ -11,22 +11,10 @@ int main(){
     printf("Unesite niz");
     for (i = 0; i<n; i++){
         scanf("%d", &niz[i]);
-        //a
-        if(niz[i] & 1 ){
-            sn+= niz[i];
-        }
-        else{
-            sp+= niz[i];
-        }
-        if(i & 1){
-            snb+=niz[i];
-        }
-        else{
-            spb+=niz[i];
-        }
+        (niz[i] & 1 ) ? sn+= niz[i] : sp += niz[i];
+        (i & 1) ? snb += niz[i] : spb += niz[i];
     }
     printf("Suma neparnih brojeva je : %d, sa suma parnih brojeva je %d \n", sn, sp);
     printf("Suma Brojeva na neparnim indeksima je : %d, a suma brojeva na parnim indeksima je : %d \n", snb, spb);
-
     return 0;
 }
