@@ -8,39 +8,55 @@
 #include<stdio.h>
 #define MAX 100
 
-int prosek_svih_studenata(int prosek1[],int n){
-    int i,s=0,t;
+float prosek(int niz[], int n){
+    int i,s=0;
+    float ar;
     for(i=0;i<n;i++){
-        s+=prosek1[i];
-        t=s/n;
+        s+=niz[i];
     }
+    ar=(float)s/n;
+    return ar;
 }
-int prosek_koji_su_polozili(int prosek2[],int n){
-    int i;
-    for(i=0;i<n;i++){
-        if(prosek2[i]>5){
-            return prosek_svih_studenata(prosek2,n);
+
+float prosek_svih_studenata(int niz[],int n){
+    return prosek(niz, n);
+}
+
+float prosek_koji_su_polozili(int niz[],int n){
+    int polozili[n], i, j;
+    j=0;
+    for(i=0; i<n; i++){
+        if(niz[i]>5){
+            polozili[j] = niz[i];
+            j++;
         }
     }
+    return prosek(polozili, j);
 }
-int izracunavanje_broja_koji_su_polozili(int broj1[],int n){
-    int i;
+
+int izracunavanje_broja_koji_su_polozili(int niz[],int n){
+    int i, brojac=0;
     for(i=0;i<n;i++){
-        if(broj1[i]>5){
-            return broj1[i];
+        if(niz[i]>5){
+            brojac++;
         }
-
     }
+    return brojac;
 }
-int izracunavanje_broja_koji_nisu_polozili(int broj2[],int n){
-    int i;
-    for(i=0;i<n;i++){
-        if(broj2[i]<5)
-        return broj2[i];
-    }
-}
-int izracunavanje_broja_koji_imaju_vecu_od_prosecne(int broj3[],int n){
 
+int izracunavanje_broja_koji_nisu_polozili(int niz[],int n){
+    return n - izracunavanje_broja_koji_su_polozili(niz, n);
+}
+
+int izracunavanje_broja_koji_imaju_vecu_od_prosecne(int niz[],int n){
+    float prosecna = prosek_svih_studenata(niz,  n);
+    int i, brojac=0;
+    for(i=0; i<n; i++){
+        if(niz[i]>prosecna){
+            brojac++;
+        }
+    }
+    return brojac;
 }
 
 int main(){
@@ -50,6 +66,10 @@ int main(){
     for (i=0;i<n;i++){
         scanf("%d",&niz[i]);
     }
-    printf("Prosek svih studenata je=%d",prosek_svih_studenata(niz,n));
+    printf("Prosek svih studenata je=%.2f\n", prosek_svih_studenata(niz,n));
+    printf("Prosek studenata koji su položili je=%.2f\n", prosek_koji_su_polozili(niz,n));
+    printf("Broj studenata koji su položili je %d\n", izracunavanje_broja_koji_su_polozili(niz,n));
+    printf("%d studenata je palo \n", izracunavanje_broja_koji_nisu_polozili(niz,n));
+    printf("%d Studenata imaju veću ocenu od prosečne", izracunavanje_broja_koji_imaju_vecu_od_prosecne(niz, n));
     return 0;
 }
