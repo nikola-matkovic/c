@@ -15,6 +15,34 @@ int prosek_svih_studenata(int prosek1[],int n){
         t=s/n;
     }
 }
+int prosek_koji_su_polozili(int prosek2[],int n){
+    int i;
+    for(i=0;i<n;i++){
+        if(prosek2[i]>5){
+            return prosek_svih_studenata(prosek2,n);
+        }
+    }
+}
+int izracunavanje_broja_koji_su_polozili(int broj1[],int n){
+    int i;
+    for(i=0;i<n;i++){
+        if(broj1[i]>5){
+            return broj1[i];
+        }
+
+    }
+}
+int izracunavanje_broja_koji_nisu_polozili(int broj2[],int n){
+    int i;
+    for(i=0;i<n;i++){
+        if(broj2[i]<5)
+        return broj2[i];
+    }
+}
+int izracunavanje_broja_koji_imaju_vecu_od_prosecne(int broj3[],int n){
+
+}
+
 int main(){
     int i,n,niz[MAX];
     printf("Unesite n:");
