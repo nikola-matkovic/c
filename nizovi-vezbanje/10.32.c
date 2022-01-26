@@ -17,12 +17,11 @@ int main(){
     scanf("%d",&broj);
     for(i=0;i<n;i++){
         if(broj==niz[i]){
-            printf("%d",broj);
+            printf("%d",i);
         }
         else{
             printf("Trazeni broj ne postoji u nizu\n");
         }
-        
     }
     return 0;
     
