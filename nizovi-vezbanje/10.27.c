@@ -8,33 +8,20 @@ int main(){
     scanf("%d",&n);
     int niz[n];
     for(i=0;i<n;i++){
-<<<<<<< HEAD
         scanf("%d",&niz[i]);
         if(i==0){
         max=niz[0];
-=======
-        scanf("%d", &niz[i]);
-        if(i==0){
-            max = niz[i];
         }
-        if(max<niz[i]){
-            printf("true");
+            if(max<niz[i]){
             max = niz[i];
             imax = i;
->>>>>>> a076e9e528e9e5236afbcdd449f5651d7605370e
         }
-        if(niz[i]>  max){           
-        max=niz[i];
-        imax=i;
+    
     }
-
-    }
-<<<<<<< HEAD
     printf("Najveci broj je=%d",max);
     printf("Inedks tog broja je=%d",imax);
-=======
-    printf("Najveci broj je %d \n",max);
-    printf("Inedks tog broja je %d",imax);
->>>>>>> a076e9e528e9e5236afbcdd449f5651d7605370e
+
+  
+
     return 0;
 }
