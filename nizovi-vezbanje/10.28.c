@@ -3,9 +3,10 @@
 
 #include<stdio.h>
 int main(){
-    int n,i,niz[n],max,min;
+    int n,i,max,min;
     printf("Unesite n:");
     scanf("%d",&n);
+    int niz[n];
     for (i=0;i<n;i++){
         scanf("%d",&niz[i]);
         niz[0]=max;
@@ -26,4 +27,5 @@ int main(){
          
         }
     }
+    return 0;
 }
