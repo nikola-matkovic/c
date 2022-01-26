@@ -3,9 +3,10 @@
 
 #include<stdio.h>
 int main(){
-    int i,n,niz[n],m,niz1[m],min;
+    int i,n,m,niz1[m],min;
     printf("Unesite n:");
     scanf("%d",&n);
+    int niz[n];
     for(i=0;i<n;i++){
         scanf("%d",&niz[i]);
         for(i=0;i<n;i++){
