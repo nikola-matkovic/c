@@ -20,10 +20,8 @@ int main(){
         }
         niz[n-1]=t;
     }
-    
     for(i=0;i<n;i++){
         printf("%d",niz[i]);
     }
     return 0;
-
 }
