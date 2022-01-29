@@ -3,7 +3,7 @@
 
 #include<stdio.h>
 
-void main(){
+int main(){
     int i,n,p;
     //unos niza
     printf("Unesite n:");
@@ -24,4 +24,5 @@ void main(){
     for(i=0;i<n;i++){
         printf("%d ",niz[i]);
     }
+    return 0;
 }
