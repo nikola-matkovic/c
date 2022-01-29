@@ -2,7 +2,7 @@
 са обрнутим распоредом елемената.*/
 #include <stdio.h>
 
-void main(){
+int main(){
     int n, i;
     printf("unesite n");
     scanf("%d", &n);
@@ -15,4 +15,5 @@ void main(){
         B[n-1-i] = A[i];
         printf("%d", B[n-1-i]);
     }
+    return 0;
 }

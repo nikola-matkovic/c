@@ -2,7 +2,7 @@
 са обрнутим распоредом елемената.*/
 #include <stdio.h>
 
-void main(){
+int main(){
     int n, i, j=0;
     printf("unesite n");
     scanf("%d", &n);
@@ -16,4 +16,5 @@ void main(){
         printf("%d", B[j]);
         j++;
     }
+    return 0;
 }
