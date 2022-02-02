@@ -1,13 +1,15 @@
 #include <stdio.h>
 
-void main() {
+int main() {
 int i, j, n, pom;
 printf(" Broj elemenata niza: ");
 scanf("%d", &n);
-int niz[n]
+int niz[n];
 printf(" Elementi niza: ");
-for(i=0; i<n; i++)
-scanf("%d", &niz[i]);
+for(i=0; i<n; i++){
+    scanf("%d", &niz[i]);
+}
+
 for(i=1; i<n; i++)
 {
 pom=niz[i];
@@ -17,6 +19,7 @@ niz[j+1]=niz[j];
 else break;niz[j+1]=pom;
 }
 printf (" Sortirani niz: ");
-for(i=0; i<n; i++)
-printf ("%d ",niz[i]);
+for(i=0; i<n; i++){printf ("%d ",niz[i]);
+}
+return 0;
 }
