@@ -5,15 +5,13 @@
 
 int main(){
    int i,n, br, t, p, j;
-   // printf("Unesite n:);
-   // scanf("%d",&n);
-   // int niz[n];
-   // printf("Unesite niz:);
-   // for(i=0;i<n;i++){
-   //    scanf("%d",&niz[i]);
-   // }
-   n = 13;
-   int niz[] = {1, 2, 2, 3, 3, 4, 4, 4, 5, 6, 6, 6, 6 };
+    printf("Unesite n:");
+    scanf("%d",&n);
+    int niz[n];
+    printf("Unesite niz:");
+    for(i=0;i<n;i++){
+       scanf("%d",&niz[i]);
+    }
    for(i=0;i<n;i++){
       for(j=i+1;j<n;j++){
          if(niz[j]<niz[i]){
@@ -23,6 +21,10 @@ int main(){
          }
       }
    }
+   for(i=0;i<n;i++){
+      printf("%d",niz[i]);
+   }
+    
    br = niz[0];
    p = 0;
    for(i=1;  i<n; i++){
@@ -37,9 +39,9 @@ int main(){
          br = niz[i];
       }
    }
-   printf("najviše puta se ponavlja broj %d, i to %d puta", br, p);
+   printf("\n");
+   printf("Najviše puta se ponavlja broj %d, i to %d puta", br, p);
+   return 0;
 
-   // for(i=0;i<n;i++){
-	// printf("%d",&niz[i]);
+   
 }
-
