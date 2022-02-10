@@ -93,7 +93,8 @@ int main(){
             }
         }
         //ispis
-        int i=0;
+        int i;
+        i=0;
         printf("Prva matrica:\n");
         while(i<m){
             j=0;
