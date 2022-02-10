@@ -34,7 +34,7 @@ int main ()
     provera = get_anagrm (niz1, niz2);  
     if (provera)  
     {  
-        printf ("Reči %s i  %s   su anagrami   \n", niz1, niz2);  
+        printf ("Reči %s i  %s   su anagrami   \n", niz1, niz2);   
     }  
     else  
     {  
