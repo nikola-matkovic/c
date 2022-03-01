@@ -1,22 +1,22 @@
 //traži najveći broj
 #include <stdio.h>
 int main(){
-    int a, b, c, najveci;
+    int a, b, c, max;
     printf("a=");
     scanf("%d", &a);
     printf("b=");
     scanf("%d", &b);
     printf("c=");
     scanf("%d", &c);
-    najveci=a;
-    if(b>najveci)
+    max=a;
+    if(b>max)
     {
-        najveci=b;
+        max=b;
     }
-    if(c>najveci)
+    if(c>max)
     {
-        najveci=c;
+        max=c;
     }
-    printf("najveći broj je: %d", najveci);
+    printf("najveći broj je: %d", max);
     return 0;
 }

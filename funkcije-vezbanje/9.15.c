@@ -15,8 +15,7 @@ int main()
  int i;
  for(i=1; i<=500; i++){
      if(Prost(i) == 1){
-         printf("%d\t", i);
-
+        printf("%d\t", i);
      }
 
  }
