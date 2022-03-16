@@ -1,8 +1,6 @@
 //ispisati sve trocifrene brojeve koji  su jednaki 
 //a)sumi kubova svojih cifara 
 //B)sumi faktorijela svojih cifara.
-
-
 //pod b;
 
 #include <stdio.h>
