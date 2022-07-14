@@ -5,7 +5,7 @@
 #include<stdio.h>
 
 int main(){
-    int n,m,i,j;
+    int n,m,i,j,a,b;
     printf("Unesite m:");
     scanf("%d",&m);
     printf("Unesite n:");
@@ -25,7 +25,34 @@ int main(){
        
         printf("|\t");
     }
+    int temp1,temp2;
+    printf("Unesite prvu kolonu:");
+    scanf("%d",&a);
+    printf("Unesite drugu kolonu:");
+    scanf("%d",&b);
+    for(i = 0; i < m; i++){
+        for(j = 0; j < n; j++){
+         
         
+        }
+        matrix[i][b] = matrix[i][b] ^ matrix[i][a];
+        matrix[i][a] = matrix[i][b] ^ matrix[i][a];
+        matrix[i][b] = matrix[i][b] ^ matrix[i][a];
+        // printf("a:%d",matrix[i][a]);
+        // printf("b:%d",matrix[i][b]);
+        // printf("\n");
+    }
+    for(i = 0; i < m; i++){
+        for(j = 0; j < n; j++){
+            
+            printf("%d ",matrix[i][j]);
+        }
+       
+        printf("\n");
+    }
+
+
+
 
     return 0;
 }
