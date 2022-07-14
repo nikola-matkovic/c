@@ -7,6 +7,18 @@
 
 
 #include<stdio.h>
+#define SIZE 10
+
+void transponovanaMatrica(int matrix[SIZE][SIZE],int n){
+    int i,j;
+    for(i = 0;i < n;i++){
+        for(j = i + 1;j < n;j++){
+            matrix[i][j] = matrix[i][j] ^ matrix[j][i];
+            matrix[j][i] = matrix[i][j] ^ matrix[j][i];
+            matrix[i][j] = matrix[i][j] ^ matrix[j][i];
+        }
+    }
+}
 
 
 int main(){
@@ -20,7 +32,22 @@ int main(){
             scanf("%d",&matrix[i][j]);
         }
     }
+    for(i = 0;i < n;i++){
+        for(j = i + 1;j < n;j++){
+            matrix[i][j] = matrix[i][j] ^ matrix[j][i];
+            matrix[j][i] = matrix[i][j] ^ matrix[j][i];
+            matrix[i][j] = matrix[i][j] ^ matrix[j][i];
+        }
+    }
+    printf("Transponovana matrica je:\n");
+    for(i = 0;i < n;i++){
+        for(j = 0;j < n;j++){
+            printf("%d ",matrix[i][j]);
+        }
+        printf("\n");
+    }
     
+
 
     return 0;
 }
