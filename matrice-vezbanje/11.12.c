@@ -10,6 +10,11 @@
 
 
 int main(){
+    int n,i,j;
+    printf("Uensite n:");
+    scanf("%d",&n);
+    int matrix[n][n];
+    for()
 
     return 0;
 }
