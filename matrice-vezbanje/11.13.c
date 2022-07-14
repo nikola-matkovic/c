@@ -5,7 +5,7 @@
 #include<stdio.h>
 
 int main(){
-    int n,i,j;
+    int n,i,j,maks = 0,k,br;
     printf("Unesite n:");
     scanf("%d",&n);
     int matrix[n][n];
@@ -20,5 +20,24 @@ int main(){
         }
         printf("\n");
     }
-    return 0;
+    printf("niz maks el:\n");
+    br = n;
+    for(i = 0; i < n; i++){
+        for(j = 0; j < n; j++){
+            if(j == n-1){
+                if(matrix[i][j] > maks){
+                    maks = matrix[i][j];
+                }
+                break;
+                
+
+            }
+                
+        }
+        printf("%d,",maks);
+    }
+     
+      return 0;
+       
 }
+  
