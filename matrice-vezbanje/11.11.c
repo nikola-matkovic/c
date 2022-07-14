@@ -2,3 +2,20 @@
 // матрицу у облику таблице и врши замену места двема колонама на основу унета два цела броја који
 // представљају редне бројеве колона. 
 
+#include<stdio.h>
+
+int main(){
+    int n,m,i,j;
+    printf("Unesite m:");
+    scanf("%d",&m);
+    printf("Unesite n:");
+    scanf("%d",&n);
+    int matrix[m][n];
+    for(i = 0; i < m; i++){
+        for(j = 0; j < n; j++){
+            scanf("%d",&matrix[i][j]);
+        }
+    }    
+
+    return 0;
+}
