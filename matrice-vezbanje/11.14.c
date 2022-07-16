@@ -20,10 +20,10 @@ int main(){
     }
     for(i = 0; i < n; i++){
         for(j = 0; j < n; j++){
-            if(j > 0 && j < n){
+           
                 j = j - 1 - i;
                 printf("%d",matix[i][j]);
-            }
+            
             printf("\n");
         }    
     }
