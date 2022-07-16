@@ -7,6 +7,7 @@
 
 #include<stdio.h>
 #include<string.h>
+#include<stdbool.h>
 
 #define SIZE 100
 
@@ -14,9 +15,19 @@ int main(){
     char recenica[SIZE];
     int i;
     int n;
+    bool flag = true;
     printf("Unsite recenicu:\n");
     scanf("%s",recenica);
     n = strlen(recenica);
-        
+    if((recenica[0] > 'A' || recenica[0] < 'Z') || recenica[n-1] != '.'){
+        flag = false;
+    }
+    if(flag == true){
+        for(i = 0; i < n; i++){
+            
+        }  
+
+    }
+    
     return 0;
 }
