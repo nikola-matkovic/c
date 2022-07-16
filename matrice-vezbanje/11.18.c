@@ -11,7 +11,7 @@ int main(){
     printf("Uneiste n:");
     scanf("%d",&n);
     int matrix[m][n];
-    int zbir[m];
+    int zbir[n];
     //Unos matrice
     printf("Unesite matricu:");
     for(i = 0; i < n; i++){
@@ -23,18 +23,21 @@ int main(){
     printf("Zadata matrica je:\n");
     for(i = 0; i < n; i++){
         for(j = 0; j < m; j++){
-            printf("%d",matrix[i][j]);
+            printf("%d ",matrix[i][j]);
         }
+        printf("\n");
     }
     //Zbir elemenata po kolni
     printf("Zbir elemenata po kolni:\n");
     for(i = 0; i < n; i++){
         zbir[i] = 0;
         for(j = 0; j < m; j++){
-            zbir[i] += matrix[i][j];
-            
+            zbir[i] += matrix[j][i];
         }
+        
+        printf("%d ", zbir[i]);
     }
+   
 
     return 0;
 }
