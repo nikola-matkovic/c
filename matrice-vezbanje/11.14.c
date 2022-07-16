@@ -15,17 +15,25 @@ int main(){
     }
     for(i = 0; i < n; i++){
         for(j = 0; j < n; j++){
-            printf("%d",matix[i][j]);
-        }    
+            printf("%d ",matix[i][j]);
+        }
+        printf("\n");    
     }
+    printf("Gornja trougaona matrica je:\n");
     for(i = 0; i < n; i++){
         for(j = 0; j < n; j++){
            
-                j = j - 1 - i;
-                printf("%d",matix[i][j]);
+                if(i < j){
+                    printf("%d ",matix[i][j]);
+                }
+                else{
+                    printf(" *");
+                }
+               
             
-            printf("\n");
-        }    
+            
+        } 
+        printf("\n");   
     }
     
 
