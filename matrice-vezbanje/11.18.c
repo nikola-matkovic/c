@@ -40,7 +40,7 @@ int main(){
     //Uredjivanje matrice po neopadajucem redosledu sumama kolona
     printf("\nIspis matrice u uredjenom poretku:\n");
 
-    for(j = 0; j < n-1; i++){
+    for(j = 0; j < n-1; j++){
         for(i = 0; i < n-1; i++){
            
           if(zbir[i] > zbir[i + 1]){
@@ -54,6 +54,12 @@ int main(){
             zbir[i] = zbir[i] ^ zbir[i + 1];
         }
           
+        }
+        
+    }
+     for(i = 0; i < n; i++){
+        for(j = 0; j < m; j++){
+            printf("%d ",matrix[i][j]);
         }
         printf("\n");
     }
