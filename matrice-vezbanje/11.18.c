@@ -37,6 +37,13 @@ int main(){
         
         printf("%d ", zbir[i]);
     }
+    //Uredjivanje matrice po neopadajucem redosledu sumama kolona
+
+    for(i = 0; i < n; i++){
+        for(j = 0; j < m; j++){
+            
+        }
+    }
    
 
     return 0;
