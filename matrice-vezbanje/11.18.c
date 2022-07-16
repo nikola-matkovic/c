@@ -5,7 +5,7 @@
 #include<stdio.h>
 
 int main(){
-    int i,j,m,n;
+    int i,j,m,n,temp;
     printf("Uneiste m:");
     scanf("%d",&m);
     printf("Uneiste n:");
@@ -38,11 +38,24 @@ int main(){
         printf("%d ", zbir[i]);
     }
     //Uredjivanje matrice po neopadajucem redosledu sumama kolona
+    printf("\nIspis matrice u uredjenom poretku:\n");
 
-    for(i = 0; i < n; i++){
-        for(j = 0; j < m; j++){
-            
+    for(j = 0; j < n-1; i++){
+        for(i = 0; i < n-1; i++){
+           
+          if(zbir[i] > zbir[i + 1]){
+            for(int k = 0; k < n; k++){
+                matrix[k][i] = matrix[k][i] ^ matrix[k][i + 1];
+                matrix[k][i + 1] = matrix[k][i] ^ matrix[k][i + 1];
+                matrix[k][i] = matrix[k][i] ^ matrix[k][i + 1];
+            }
+            zbir[i] = zbir[i] ^ zbir[i + 1];
+            zbir[i + 1] = zbir[i] ^ zbir[i + 1];
+            zbir[i] = zbir[i] ^ zbir[i + 1];
         }
+          
+        }
+        printf("\n");
     }
    
 
