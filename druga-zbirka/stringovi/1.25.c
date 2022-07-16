@@ -24,9 +24,24 @@ int main(){
     }
     if(flag == true){
         for(i = 0; i < n; i++){
-            
-        }  
+            if(recenica[i] > 'a' || recenica[i] < 'z' && recenica[i] != ' ' && recenica[i] != ',' && recenica[i] != ';'){
+                flag = false;
+            }
+            if(recenica[i + 1] == ' ' && recenica[i + 1] == ',' && recenica[i + 1] == ';'){
+                flag = false;
+            }
+            else{
+                flag = true;
+            }
+              
 
+        }
+    }
+    if(flag == true){
+        printf("\nRecenica je ispravno uneta");
+    }
+    else{
+        printf("\nRecenica nije ispravno uneta");
     }
     
     return 0;
