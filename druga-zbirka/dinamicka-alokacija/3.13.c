@@ -9,13 +9,23 @@
 
 
 int main(){
-    int *niz,maks = 5;
-    int br;
+    int *niz;
+    int maks = 5;
+    int br = 0;
     int broj;
     niz = (int*)malloc(maks*sizeof(int));
     while(scanf("%d",&broj) == 1){
-        niz[++br] = broj;
+        niz[br] = broj;
+        br++;
+        if(br >= maks){
+            maks += 5;
+            niz = (int*)realloc(niz,maks*sizeof(int));
+        }
     }
+    for(int i = 0; i < maks; i++){
+        printf("%d ",niz[i]);
+    }
+    free(niz);
  
 
     return 0;
