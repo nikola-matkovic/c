@@ -16,7 +16,7 @@ int main(){
     }
     printf("Trenutni niz je:\n");
     for(i = 0;i < n;i++){
-        printf("%d",niz[i]);
+        printf("%d ",niz[i]);
     }
     printf("Unesite poziciju novog elememta");
     scanf("%d",&j);
@@ -25,16 +25,19 @@ int main(){
     }
     printf("Uneiste elment:");
     scanf("%d",&elem);
-    n++;
+   n++;
     niz = (int*)realloc(niz,n*sizeof(int));
+    int temp = niz[0];
     printf("Niz sa novim elementom je:\n");
-    for(i = 0;i < j;i++){
+    for(i = n;i > j-1;i--){
         niz[i] = niz[i-1];
         niz[j] = elem;
+        niz[n-1];
 
     }
     for(i = 0;i < n; i++){
-        
+        printf("%d",niz[i]);
     }
+    free(niz);
     return 0;
 }
