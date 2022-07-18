@@ -27,16 +27,18 @@ int main(){
     scanf("%d",&elem);
    n++;
     niz = (int*)realloc(niz,n*sizeof(int));
-    int temp = niz[0];
+    int temp = niz[j];
     printf("Niz sa novim elementom je:\n");
-    for(i = n;i > j-1;i--){
+    for(i = n;i > j;i--){
         niz[i] = niz[i-1];
         niz[j] = elem;
-        niz[n-1];
-
+        if(niz[j] == elem && niz[j+1] == elem){
+            niz[j] = niz[j+1];
+            niz[j] = temp; 
+        }
     }
     for(i = 0;i < n; i++){
-        printf("%d",niz[i]);
+        printf("%d ",niz[i]);
     }
     free(niz);
     return 0;
