@@ -5,12 +5,16 @@
 #include<stdlib.h>
 
 int main(){
-    int n,i;
+    int n,i,*niz;
     printf("Unesite duzinu:");
     scanf("%d",&n);
-    int niz[n];
+    niz = (int*)malloc(sizeof(int));
+
     for(i = 0; i < n; i++){
         scanf("%d",&niz[i]);
+    }
+     for(i = 0; i < n; i++){
+        printf("%d",niz[i]);
     }
     return 0;
 }
