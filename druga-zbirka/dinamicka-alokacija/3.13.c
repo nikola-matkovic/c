@@ -8,6 +8,7 @@
 
 
 
+
 int main(){
     int *niz;
     int maks = 5;
@@ -22,8 +23,12 @@ int main(){
             niz = (int*)realloc(niz,maks*sizeof(int));
         }
     }
+    printf("Niz koji smo uneli je:\n");
     for(int i = 0; i < maks; i++){
-        printf("%d ",niz[i]);
+        if(niz[i] != 'a' && niz[i] != 0){
+            printf("%d ",niz[i]);
+        }
+       
     }
     free(niz);
  
