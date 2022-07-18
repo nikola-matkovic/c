@@ -74,6 +74,32 @@ int main(){
     for(int i = 0; i < nPresek - 1; i++){
         printf("%d", pom[i]);
     }
-    //
+    //razlika
+    printf("\nRazlika: \n");
+    nArazlikaB = 1; 
+    ArazlikaB = (int*)malloc(nArazlikaB*sizeof(int));
+    for(int i = 0; i < nA; i++){
+        int element = A[i];
+        bool nadjen = false;
+        for(int j = 0; j < nB; j++){
+            if(element != B[j]){
+                nadjen = true;
+                break;
+            }
+        }
+        if(nadjen){
+            ArazlikaB[nArazlikaB  - 1] = element;  
+            nArazlikaB ++; 
+            ArazlikaB = (int*) realloc(ArazlikaB, nArazlikaB*(sizeof(int)));
+        }
+    }
+    int * temp = (int*)malloc( (nArazlikaB - 1)  * sizeof(int));
+    for(int i = 0; i < (nArazlikaB-1) ; i++){
+        temp[i] = ArazlikaB[i];
+    }
+    for(int i = 0; i < nArazlikaB - 1; i++){
+        printf("%d", temp[i]);
+    }
+
     return 0;
 }
