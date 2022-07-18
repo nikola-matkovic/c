@@ -6,6 +6,17 @@
 #include<stdlib.h>
 
 int main(){
-    
+    int *niz,i,j,n;
+    printf("Unesite duzinu niza:");
+    scanf("%d",&n);
+    niz = (int*)malloc(sizeof(int));
+    printf("Unesite niz:\n");
+    for(i = 0;i < n;i++){
+        scanf("%d",&niz[i]);
+    }
+    printf("Trenutni niz je:\n");
+    for(i = 0;i < n;i++){
+        printf("%d",niz[i]);
+    }
     return 0;
 }
