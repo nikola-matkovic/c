@@ -5,7 +5,7 @@
 #include<stdlib.h>
 
 int main(){
-    int n,i,*niz;
+    int n,i,*niz,maks = 0;
     printf("Unesite duzinu:");
     scanf("%d",&n);
     niz = (int*)malloc(sizeof(int));
@@ -14,7 +14,11 @@ int main(){
         scanf("%d",&niz[i]);
     }
      for(i = 0; i < n; i++){
-        printf("%d",niz[i]);
+        if(niz[i] > maks){
+            maks = niz[i];
+        }
+        printf("%d ",niz[i]);
     }
+    printf("\nNajveci elemnt je:%d",maks);
     return 0;
 }
