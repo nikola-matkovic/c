@@ -7,6 +7,7 @@
 #include<stdlib.h>
 
 int main(){
+    system("clear");
     int i,j,m,n;
     printf("Unesite m:");
     scanf("%d",&m);
@@ -25,11 +26,12 @@ int main(){
             scanf("%d", &matrix[i][j]);
         }
     }
-    printf("Ispis zadate matice je:");
+    printf("Ispis zadate matice je:\n");
      for(i = 0; i < n; i++){
         for(j = 0; j < m; j++){
-            printf("%d", matrix[i][j]);
+            printf("%d ", matrix[i][j]);
         }
+        printf("\n");
     }
     return 0;
 }
