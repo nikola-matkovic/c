@@ -78,6 +78,13 @@ int izracunajASsuseda(int **matrix,int m,int n){
     return brojTrazenihEl;
 
 }
+void oslobadjanjeMemorije(int **matrix,int x){
+    int i,j;
+    for(i = 0;i < x;i++){
+        free(matrix[i]);
+    }  
+    free(matrix); 
+}
 
 int main(){
     system("clear");
@@ -100,6 +107,8 @@ int main(){
         }
     }
     ispisMatrice(matrix,m,n);
-  
+    printf("Matrica ima %d suseda",izracunajASsuseda(matrix,m,n));
+    oslobadjanjeMemorije(matrix,m);
+   
     return 0;
 }
