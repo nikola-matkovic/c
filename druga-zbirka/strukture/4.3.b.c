@@ -5,21 +5,21 @@
 #include<stdlib.h>
 
 typedef struct radnik{
-    char *ime;
-    char *prezime;
+    char *ime[30];
+    char *prezime[30];
     int plata;
 }RADNIK;
 
 int main(){
     struct radnik Radnik;
 printf("Unsite ime radnika:");
-scanf("%s",Radnik.ime);
+scanf("%s",&Radnik.ime);
 printf("Uneste prezime radnika:");
-scanf("%s",Radnik.prezime);
+scanf("%s",&Radnik.prezime);
 printf("Uneste platu radnika:");
 scanf("%d",&Radnik.plata);
 
 //Ispis
-printf("%s %s ima %d platu",Radnik.ime,Radnik.prezime,Radnik.plata);
+printf("%s %s ima %d eura platu",Radnik.ime,Radnik.prezime,Radnik.plata);
     return 0;
 }
