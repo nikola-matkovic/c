@@ -11,7 +11,7 @@ typedef struct datum{
 }DATUM;
 
 int main(){
-    struct datum d,g,m,*datum;
+    struct datum *datum;
     int x,y,z;
     printf("Unesite dan:");
     scanf("%d",&x);
@@ -19,9 +19,7 @@ int main(){
     scanf("%d",&y);
     printf("Unesite godinu:");
     scanf("%d",&z);
-    datum = &d;
-    datum = &g;
-    datum = &m;
+   
     datum->dan = &x;
     datum->mesec = &y;
     datum->godina = &z;
