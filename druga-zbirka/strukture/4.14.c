@@ -41,6 +41,6 @@ int main(){
     }
 
     // unesiOsobu(Osoba2);
-    printf("Starija osoba je:\n %s %s zivi na adresi %s i ima %d godina",(*starija).ime,(*starija).prezime,(*starija).adresa,(*starija).godine);
+    printf("Starija osoba je:\n %s %s zivi na adresi %s i ima %u godina",(*starija).ime,(*starija).prezime,(*starija).adresa,(*starija).godine);
     return 0;
 }
