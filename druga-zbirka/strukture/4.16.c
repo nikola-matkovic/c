@@ -7,7 +7,7 @@
 #include<math.h>
 #include<stdbool.h>
 
-// Tacka
+// Tacka.
 
 typedef struct tacka{
     int x;
