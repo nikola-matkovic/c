@@ -16,7 +16,42 @@ typedef struct radnik{
 }RADNIK;
 
 int main(){
-     struct radnik radnici;
-
+    struct radnik radnici[SIZE];
+    int i,n;
+    int ukupniSatiuMesecu = 160;
+    int povisica;
+    int procenat;
+    printf("Unesi broj radnika:");
+    scanf("%d",&n);
+    for(i = 0; i < n; i++){
+        printf("\nUnesi ime:");
+        scanf("%s",radnici[i].ime);
+        printf("\nUnesi prezime:");
+        scanf("%s",radnici[i].prezime);
+        printf("\nUnesi brojRadnihSati:");
+        scanf("%d",&radnici[i].brojRadnihSati);
+        printf("\nUnesi platu:");
+        scanf("%d",&radnici[i].plata);
+    }
+    
+    for(i = 0; i < n;i++){
+        printf("%s %s je radio %d sati ovog meseca i ima platu %d eura\n",radnici[i].ime,radnici[i].prezime,radnici[i].brojRadnihSati,radnici[i].plata);
+    }
+    for(i = 0; i < n;i++){
+        
+        if(radnici[i].brojRadnihSati > ukupniSatiuMesecu){
+            povisica = radnici[i].brojRadnihSati - ukupniSatiuMesecu;
+            if(povisica % 20 == 0){
+                radnici[i].plata = radnici[i].plata + radnici[i].plata * 15 / 100; 
+            }
+            if(povisica % 30 == 0){
+                radnici[i].plata = radnici[i].plata + radnici[i].plata * 25 / 100; 
+            }
+            if(povisica % 30 == 0 && povisica % 20 == 0){
+                radnici[i].plata = radnici[i].plata + radnici[i].plata * 25 / 100; 
+            }
+            printf("Plata %s sa povisicom iznosi: %d\n",radnici[i].ime,radnici[i].plata);
+        }   
+    }
     return 0;
 }
