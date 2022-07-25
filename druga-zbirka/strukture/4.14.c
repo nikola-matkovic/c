@@ -4,28 +4,27 @@
 
 #include<stdio.h>
 #include<string.h>
+#include <stdlib.h>
 
 typedef struct osoba{
     char ime[30];
     char prezime[30];
     char adresa[30];
-    int godine;
-
+    char godine[3];
 }OSOBA;
 
 void unesiOsobu(struct osoba *o){
     printf("Unesite ime:");
-    scanf("%s",o->ime);
+    scanf("%[^\n]%*c",o->ime);
     printf("\nUnesite prezime:");
-    scanf("%s",o->prezime);
+    scanf("%[^\n]%*c",o->prezime);
     printf("\nUnesite adresu:");
-    scanf("%s",o->adresa);
+    scanf("%[^\n]%*c",o->adresa);
     printf("\nUnesite godine:");
-    scanf("%u",&o->godine);
+    scanf("%[^\n]%*c", o->godine);
 }
 
 int main(){
-  
     struct osoba Osoba1;
     struct osoba Osoba2;
     struct osoba *starija;
@@ -39,8 +38,6 @@ int main(){
     else{
         starija = &Osoba2;
     }
-
-    // unesiOsobu(Osoba2);
-    printf("Starija osoba je:\n %s %s zivi na adresi %s i ima %u godina",(*starija).ime,(*starija).prezime,(*starija).adresa,(*starija).godine);
+    printf("Starija osoba je:\n %s %s zivi na adresi %s i ima %s godina",(*starija).ime,(*starija).prezime,(*starija).adresa, (*starija).godine);
     return 0;
 }
