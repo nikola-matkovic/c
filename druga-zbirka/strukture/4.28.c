@@ -18,7 +18,8 @@ typedef struct student{
 
 int main(){
     struct student studenti[SIZE];
-    int i,n;
+    int i,n,j;
+    int temp;
     printf("Unesite broj studenata:");
     scanf("%d",&n);
     for(i = 0; i < n; i++){
@@ -29,9 +30,24 @@ int main(){
         printf("Unesite ocenu:");
         scanf("%d",&studenti[i].ocena);
     }
+    for(i = 0;i < n-1;i++){
+        for(j = 0;j < n-1;j++){
+    if(studenti[j].ocena > studenti[j + 1].ocena){
+        temp = studenti[j].ocena;
+        studenti[j].ocena = studenti[j + 1].ocena;
+        studenti[j + 1].ocena = temp;
+
+        // studenti[j].ocena = studenti[j].ocena ^ studenti[j + 1].ocena;
+        // studenti[j + 1].ocena = studenti[j].ocena ^ studenti[i + 1].ocena;
+        // studenti[j].ocena = studenti[j].ocena ^ studenti[j + 1].ocena;
+        }
+        
+    }
+}
     for(i = 0;i < n;i++){
-        printf("%s %s ima ocenu %d",studenti[i].ime,studenti[i].prezime,studenti[i].ocena);
+        printf("%s %s ima ocenu %d\n",studenti[j].ime,studenti[j].prezime,studenti[j].ocena);
     }
 
     return 0;
+
 }
