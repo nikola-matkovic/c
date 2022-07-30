@@ -1,3 +1,1 @@
-Zdravo svima !
-Ovo je datoteka!
-Pozdrav svima
+Zdravo svima ovo je datoteka!Pozdrav svima!
