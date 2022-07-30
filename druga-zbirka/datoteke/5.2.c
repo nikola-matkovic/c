@@ -12,7 +12,7 @@ int main(){
         printf("Greska");
         exit(1);
     }
-    fprintf(datoteka, "Zdravo svima ovo je datoteka!");
+    fprintf(datoteka, "Zdravo svima ovo je datoteka!\n");
     fclose(datoteka);
     datoteka = fopen("podaci2.txt","a");
     if(datoteka==NULL){
