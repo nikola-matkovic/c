@@ -28,7 +28,7 @@ int main(){
         if(feof(datoteka)){
             break;
         }
-        printf("Procitano:%d",&br);
+        printf("Procitano:%d",br);
 
     }
     fclose(datoteka);
