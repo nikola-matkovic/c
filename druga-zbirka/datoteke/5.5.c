@@ -8,6 +8,9 @@
 
 int main(){
     int br;
+    int pom;
+    int zastava = 1;
+    int cifra;
     FILE *datoteka1,*datoteka2;
     datoteka1 = fopen("BrojeviY.txt", "r");
     datoteka2 = fopen("BrojeviX.txt", "w");
@@ -15,10 +18,26 @@ int main(){
         printf("Greska");
     }
     while(1){
+        pom = br;
        fscanf(datoteka1, "%d", &br);
-       
-    }
+       if(feof(datoteka1)){
+        break;
+       }
+       while(pom != br){
+        cifra = pom % 10;
+        if(cifra != 3 && cifra != 7){
+            pom = pom / 10;
+            zastava = 0;
+        }
+       }
+       if(zastava && br != 0){
+        fprintf(datoteka2,"%d",br);
+       }
 
+      
+    }
+    fclose(datoteka1);
+    fclose(datoteka2);
 
 
     return 0;
