@@ -7,6 +7,14 @@
 #include<string.h>
 
 int main(){
-    
+    FILE *svi;
+    FILE *pozitivni;
+    FILE *negativni;
+    svi = fopen("svi.txt", "r");
+    pozitivni = fopen("pozitivni.txt", "w");
+    negativni = fopen("negativni.txt", "w");
+    if(svi == NULL || pozitivni == NULL || negativni == NULL){
+        printf("Greska");
+    }
     return 0;
 }
