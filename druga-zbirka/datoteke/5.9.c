@@ -11,14 +11,19 @@
 int main(){
     FILE *prva;
     FILE *druga;
-    int brKarakter = 0;
     char karakter;
     prva = fopen("podaci6.txt", "r");
     druga = fopen("podaci6Novo.txt", "w");
     if(prva == NULL || druga == NULL){
         printf("Greska");
     }
-    
+    while(!feof(prva)){
+        karakter = fgetc(prva);
+        fputc(karakter,druga);
+    }
+    fclose(prva);
+    fclose(druga);
+
 
 
     return 0;
