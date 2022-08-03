@@ -9,6 +9,8 @@ ravnoteži odraditi pomoću funkcije koja vraća 1 ako jeste, 0 ako nije u ravno
 
 indeksu P. 
 
+-1 -4 5 1 -6 2 1
+
 2. Sastaviti program koji formira matricu realnih brojeva dienzija mxn. Program treba da izračuna koliko postoji elemenata matrice koji su jednaki aritmetičkoj sredini svojih
 
 suseda i ispiše njihove pozicije u matrici. Unos matrice i izračunavanje odraditi
@@ -40,16 +42,18 @@ int main(){
     }
     printf("Unesite indeks P:");
     scanf("%d",&p);
-    for(i = 0; i < p; i++){
+    for(i = 0; i < p-1; i++){
         temp1 = niz[p] += niz[p + 1];
     }
     for(i = 0; i < n; i++){
         temp2 = niz[i] += niz[i + 1];
     }
+    printf("Temp1 = %d",temp1);
+    printf("Temp2 = %d",temp2);
     if(temp1 == temp2){
         semafor = 1;
     }
-    else{
+    else if(temp1 != temp2){
         semafor = 0;
     }
     if(semafor == 1){
