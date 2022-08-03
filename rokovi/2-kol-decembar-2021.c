@@ -9,7 +9,7 @@ ravnoteži odraditi pomoću funkcije koja vraća 1 ako jeste, 0 ako nije u ravno
 
 indeksu P. 
 
--1 -4 5 1 -6 2 1
+-1 3 -4 5 1 -6 2 1
 
 2. Sastaviti program koji formira matricu realnih brojeva dienzija mxn. Program treba da izračuna koliko postoji elemenata matrice koji su jednaki aritmetičkoj sredini svojih
 
@@ -26,36 +26,57 @@ Prof. dr Bratislav Mirić
 
 #include<stdio.h>
 #include<stdlib.h>
+#include <time.h>
 
 
 int main(){
     int i,n;
-    int p,temp1,temp2;
+    int p,temp1,temp2,temp3;
     int semafor = 1;
     printf("Uneiste n:");
     scanf("%d",&n);
     int *niz;
+    // int *nizP;
     niz = (int*)malloc(n*sizeof(int));
     printf("Unesite elemente niza:\n");
     for(i = 0;i < n;i++){
         scanf("%d",&niz[i]);
     }
+
+    
     printf("Unesite indeks P:");
     scanf("%d",&p);
+    printf("P niz je :\n");
+
+    // nizP = (int*)malloc(p*sizeof(int));
+
+
+    
+    
     for(i = 0; i < p; i++){
-        if(niz[p] < 0 && niz[p + 1] < 0){
-            temp1 = niz[p] - niz[p + 1];
-        }
-        if(niz[p] < 0 && niz[p + 1] > 0){
-            
-        }
-        temp1 = niz[p] + niz[p + 1];
-        printf("p:%d\n",p);
-        printf("niz[p] + niz[p + 1] = %d + %d\n",niz[p],niz[p + 1]);
+        // nizP[p] = niz[i]
+        
+       temp1 = niz[i] + niz[i + 1];
+    //    printf("kada se saberu prvi i drugi Temp 1:%d \n",temp1);
+     
+       
+        // printf("niz[p + 1]:%d \n",niz[i + 1]);
+        temp1 += niz[i + 2];
+        //  printf("Temp kada se sabere sa trecim temp1:%d\n ",temp1);
+       
+
     }
-    for(i = 0; i < n; i++){
+      for(i = 4; i < n; i++){
         temp2 = niz[i] + niz[i + 1];
+        printf("Temp2 prvi i derugi :%d\n\n",temp2);
+        temp3 = temp2;
+        temp3 = temp3 + niz[i + 2];
+      
+
+        printf("Temp2 sa trecim: %d\n\n",temp2);
+        
     }
+   
     printf("Temp1 = %d\n",temp1);
     printf("Temp2 = %d\n",temp2);
     if(temp1 == temp2){
