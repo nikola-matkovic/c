@@ -42,14 +42,22 @@ int main(){
     }
     printf("Unesite indeks P:");
     scanf("%d",&p);
-    for(i = 0; i < p-1; i++){
-        temp1 = niz[p] += niz[p + 1];
+    for(i = 0; i < p; i++){
+        if(niz[p] < 0 && niz[p + 1] < 0){
+            temp1 = niz[p] - niz[p + 1];
+        }
+        if(niz[p] < 0 && niz[p + 1] > 0){
+            
+        }
+        temp1 = niz[p] + niz[p + 1];
+        printf("p:%d\n",p);
+        printf("niz[p] + niz[p + 1] = %d + %d\n",niz[p],niz[p + 1]);
     }
     for(i = 0; i < n; i++){
-        temp2 = niz[i] += niz[i + 1];
+        temp2 = niz[i] + niz[i + 1];
     }
-    printf("Temp1 = %d",temp1);
-    printf("Temp2 = %d",temp2);
+    printf("Temp1 = %d\n",temp1);
+    printf("Temp2 = %d\n",temp2);
     if(temp1 == temp2){
         semafor = 1;
     }
