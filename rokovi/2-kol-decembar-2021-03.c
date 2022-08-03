@@ -15,10 +15,11 @@
 #define SIZE 100
 
 typedef struct vrata{
-    char sifraModelaVrata[30];
+    int sifraModelaVrata;
     int povrsinaPlastike;
     int povrsinaDrveta;
     int povrsinaStakla;
+    float cena;
 
 }VRATA; 
 
@@ -27,6 +28,7 @@ int main(){
     int cenaPlastike;
     int cenaDrveta;
     int cenaStakla;
+    int brojVrata = 0;
     printf("Unesite cenu po kvadratnom metru plastike:");
     scanf("%d",&cenaPlastike);
     printf("Unesite cenu po kvadratnom metru srveta:");
@@ -45,6 +47,26 @@ int main(){
     if(CENE == NULL){
         printf("Greska prilikom otvaranja fajla Cene.txt");
         exit(1);
+    }
+
+
+    while(!feof(VRATA)){
+       
+    for(int i = 0; i < brojVrata;i++){
+        if(fscanf(VRATA, "%d","%d","%d","%d",&Vrata[i].sifraModelaVrata,&Vrata[i].povrsinaPlastike,&Vrata[i].povrsinaDrveta,&Vrata[i].povrsinaStakla)){
+            brojVrata++;
+        }
+            if(Vrata[i].povrsinaPlastike > 0 && Vrata[i].povrsinaStakla == 0 && Vrata[i].povrsinaDrveta == 0){
+                printf("Vrata su 100 posto od drveta\n");
+            }
+            Vrata[i].cena = Vrata[i].povrsinaPlastike * cenaPlastike + Vrata[i].povrsinaDrveta * cenaDrveta + Vrata[i].povrsinaStakla * cenaStakla;
+    }
+
+    }
+    while(!feof(CENE)){
+        for(int i = 0; i < brojVrata; i++){
+            fprintf(CENE, "%d","%f",Vrata[i].sifraModelaVrata,Vrata[i].cena);
+        }
     }
 
     return 0;
