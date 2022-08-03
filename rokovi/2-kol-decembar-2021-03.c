@@ -12,6 +12,8 @@
 #include<stdlib.h>
 #include<string.h>
 
+#define SIZE 100
+
 typedef struct vrata{
     char sifraModelaVrata[30];
     int povrsinaPlastike;
@@ -21,9 +23,7 @@ typedef struct vrata{
 }VRATA; 
 
 int main(){
-    struct vrata Vrata1;
-    struct vrata Vrata2;
-    struct vrata  Vrata3;
+    struct vrata Vrata[SIZE];
     int cenaPlastike;
     int cenaDrveta;
     int cenaStakla;
@@ -39,10 +39,13 @@ int main(){
 
     if(VRATA == NULL){
         printf("Greska prilikom otvaranja fajla Vrata.txt");
+        exit(1);
     }
 
     if(CENE == NULL){
         printf("Greska prilikom otvaranja fajla Cene.txt");
+        exit(1);
     }
+
     return 0;
 }
