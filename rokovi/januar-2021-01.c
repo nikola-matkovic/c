@@ -59,6 +59,7 @@ int main(){
     int n,i,j;
     int k;
     int broj = 0;
+    int duzinaBroja = 0;
     printf("Koliko cete brojeva uneti:");
     scanf("%d",&k);
     int pomocniNiz[k];
@@ -74,14 +75,23 @@ int main(){
         printf("\nUnesite cifru:");
         scanf("%d",&temp);
         broj = broj * 10 + temp;
-        
         }
+        
         pomocniNiz[i] = broj;
        
     }
+    for(i = 0; i < k; i++){
+        duzinaBroja = 0;
+        for(j = 0; j < n; j++){
+            broj = broj / 10;
+            duzinaBroja++;
+        }
+    }
     printf("Vasi brojevi su:\n");
     for(i = 0;i < k;i++){
-        printf("%d,",pomocniNiz[i]);
+        if(broj / duzinaBroja == 0){
+            printf("%d,",pomocniNiz[i]);
+        }
     }
    
     return 0;
