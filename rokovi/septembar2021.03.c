@@ -8,12 +8,9 @@
 //broj blokada * 0.22.
 //Zadatak rešiti upotrebom funkcije za čitanje sadržaja datoteke, 
 //funkcije za ispis podataka i funkcije za računanje ukupnog broja poena.
-
 #include <stdio.h>
 #include <stdlib.h>
-
 #define MAX 100
-
 typedef struct igrac{
     char ime[20];
     float visina;
@@ -33,12 +30,13 @@ int main(){
     IGRAC igraci[MAX];
     int i = 0;
     while(!feof(datoteka)){
-        fscanf(datoteka, "%s %f %f %d %d %d %d", igraci[i].ime, igraci[i].visina,igraci[i].tezina,igraci[i].brojKoseva,igraci[i].brojAsistencija,igraci[i].brojUkradenihLopti,igraci[i].brojBlokada);
-        igraci[i].ukupnoPoena  = 0;
+        fscanf(datoteka, "%s %f %f %d %d %d %d", igraci[i].ime, &igraci[i].visina, &igraci[i].tezina, &igraci[i].brojKoseva, &igraci[i].brojAsistencija, &igraci[i].brojUkradenihLopti, &igraci[i].brojBlokada);
+        igraci[i].ukupnoPoena = 0;
         igraci[i].ukupnoPoena += igraci[i].brojKoseva;
         igraci[i].ukupnoPoena += igraci[i].brojAsistencija * 0.5;
         igraci[i].ukupnoPoena += igraci[i].brojUkradenihLopti * 0.3;
         igraci[i].ukupnoPoena += igraci[i].brojBlokada * 0.22;
+        printf("%f \n" ,igraci[i].ukupnoPoena );
         i++;
     }
     IGRAC najbolji = igraci[0];
