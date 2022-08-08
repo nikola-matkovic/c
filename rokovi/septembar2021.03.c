@@ -10,8 +10,12 @@
 //funkcije za ispis podataka i funkcije za računanje ukupnog broja poena.
 
 #include <stdio.h>
-#include<stdlib.h>
+#include <stdlib.h>
+
+#define MAX 100
+
 typedef struct igrac{
+    char ime[20];
     float visina;
     float tezina;
     int brojKoseva;
@@ -19,8 +23,30 @@ typedef struct igrac{
     int brojUkradenihLopti;
     int brojBlokada;
     float ukupnoPoena;
-}
+}IGRAC;
 int main(){
-
+    FILE * datoteka = fopen("igraci.txt", "r");
+    if(datoteka == NULL){
+        printf("greška");
+        exit(1);
+    }
+    IGRAC igraci[MAX];
+    int i = 0;
+    while(!feof(datoteka)){
+        fscanf(datoteka, "%s %f %f %d %d %d %d", igraci[i].ime, igraci[i].visina,igraci[i].tezina,igraci[i].brojKoseva,igraci[i].brojAsistencija,igraci[i].brojUkradenihLopti,igraci[i].brojBlokada);
+        igraci[i].ukupnoPoena  = 0;
+        igraci[i].ukupnoPoena += igraci[i].brojKoseva;
+        igraci[i].ukupnoPoena += igraci[i].brojAsistencija * 0.5;
+        igraci[i].ukupnoPoena += igraci[i].brojUkradenihLopti * 0.3;
+        igraci[i].ukupnoPoena += igraci[i].brojBlokada * 0.22;
+        i++;
+    }
+    IGRAC najbolji = igraci[0];
+    for(int j = 0; j < i; j++){
+        if(igraci[j].ukupnoPoena > najbolji.ukupnoPoena){
+            najbolji = igraci[j];
+        }
+    }
+    printf("najbolji igrac je %s sa %f poena", najbolji.ime, najbolji.ukupnoPoena);
 return 0;
 }
