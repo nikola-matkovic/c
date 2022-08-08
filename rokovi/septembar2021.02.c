@@ -100,4 +100,3 @@ int main(){
     unosPolja(m, matrica);
     return 0;
 }
-
