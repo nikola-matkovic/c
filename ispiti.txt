@@ -1,0 +1,5 @@
+Nikola Matković 10 40 50
+Tarik kučević 20 30 50
+bahir Nurković 0 0 0 
+erten Preljević 20 40 10
+ermin paljević 0 40 15
