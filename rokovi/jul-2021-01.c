@@ -164,12 +164,12 @@ int main(){
         
 
     printf("Niz brojeva je:\n");
-    // printf("%d\n", niz[0]);
-    // printf("%d\n", niz[1]);
-    // printf("%d\n", niz[2]);
-
+ 
     for(i = 0;i < brojCifara;i++){
         printf("%d",niz[i]);
+    }
+    for(i = 0;i < brojCifara;i++){
+        
     }
 
     printf("\nBroj cifara je: %d\n",brojCifara);
