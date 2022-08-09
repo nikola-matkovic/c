@@ -3,6 +3,8 @@
 
 #define SIZE 10
 
+//Moj nacin
+
 int main(){
     int broj,temp,brojCifara = 0,temp2,temp3;
     int niz[SIZE],i;
