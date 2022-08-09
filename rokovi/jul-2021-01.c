@@ -74,9 +74,9 @@ Novi Pazar, 26.6.2021. godine
 // na neparnim pozicijama. Primer: Broj 15345 je savršen jer je zbir 1+3+5-5+4
 // dok broj 12345 nije savršen jer 1+3+5/2+4.
 
-/*
 
-Njihov nacin 
+
+
 int obrnutiBroj(int broj){
     int obrnuti = 0;
     while(broj != 0){
@@ -123,7 +123,7 @@ int main(){
     return 0;
 }
 
-*/
 
-//Moja nacin
+
+
 
