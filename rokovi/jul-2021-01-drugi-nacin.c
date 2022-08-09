@@ -13,7 +13,6 @@ int main(){
     scanf("%d",&broj);
     temp = broj;
     temp2 = broj;
-   
     while(temp != 0){
         temp = temp / 10;
         brojCifara++;
@@ -25,18 +24,12 @@ int main(){
     }
 
     temp3 = obrnutiBroj;
-   
-
-     
-        for(i = 0;i < brojCifara;i++){
+    for(i = 0;i < brojCifara;i++){
         obrnutiBroj = obrnutiBroj % 10;
         niz[i] = obrnutiBroj;
         temp3 = temp3 / 10;
         obrnutiBroj = temp3;
         }
-        
-        
-
     printf("Niz brojeva je:\n");
  
     for(i = 0;i < brojCifara;i++){
