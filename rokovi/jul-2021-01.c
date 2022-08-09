@@ -84,48 +84,37 @@ int obrnutiBroj(int broj){
     return obrnuti;
 }
 
+void suma(int broj){
+    broj = obrnutiBroj(broj);
+    int sumaNeparnih = 0,sumaParnih = 0,c = 1;
+
+    while(broj != 0){
+        if(c % 2 == 0){
+            sumaParnih += broj % 10;
+        }
+        else{
+            sumaNeparnih += broj % 10;
+        }
+        broj /= 10;
+        c++;
+    }
+    printf("Suma parnih:%d\n",sumaParnih);
+    printf("Suma neparnih:%d\n",sumaNeparnih);
+    if(sumaParnih == sumaNeparnih){
+        printf("Broj je savrsen\n");
+    }
+    else{
+        printf("Broj nije savrsen\n");
+    }
+}
+
 
 
 int main(){
     int broj;
-    int parnePozicije = 0;
-    int neparnePozicije = 0;
-    int brojCifara = 0;
-    int temp = broj;
-    int temp1 = broj;
-    printf("Unsite broj:");
+    printf("Unesite broj:");
     scanf("%d",&broj);
-    while(temp != 0){
-        temp /= 10;
-        brojCifara++;
-    }
-     printf("broj:%d / %d\n",broj,(int)pow(10,brojCifara-5));
-    neparnePozicije = (int)broj / (int)pow(10,brojCifara-5);
-
-   
-
-    printf("Neparne pozicije uzima prvi broj %d\n",neparnePozicije);
-     printf("Broj cifara pre while = %d\n",brojCifara);
-     printf("Broj pre while:%d\n",broj);
-    while(broj != 0){
-       if(brojCifara > 0){
-            brojCifara-=2;
-       }
-       else{
-        break;
-       }
-       temp1 = temp1 / pow(10,brojCifara);
-
-    // broj = broj / pow(10,brojCifara);
-       
-      
-        // broj = (int)broj % (int)pow(10,brojCifara);
-        // neparnePozicije += broj % 10; 
-    }
-    printf("temp1 je:%d",temp1);
-    printf("Zbir nepanih pozicija je %d\n",neparnePozicije);
-    printf("Broj cifara je: %d",brojCifara);
-   
+    suma(broj);
      
 
 
