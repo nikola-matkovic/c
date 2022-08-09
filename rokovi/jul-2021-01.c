@@ -150,7 +150,7 @@ int main(){
         obrnutiBroj = (obrnutiBroj * 10) + (temp2 % 10);
         temp2 = temp2 / 10;
     }
-    printf("Obrnuti broj je:%d\n", obrnutiBroj);
+
     temp3 = obrnutiBroj;
    
 
@@ -187,7 +187,6 @@ int main(){
         printf("Broj nije savrsen\n");
     }
 
-    printf("\nBroj cifara je: %d\n",brojCifara);
 
 
     return 0;
