@@ -135,6 +135,7 @@ int main(){
 int main(){
     int broj,temp,brojCifara = 0,temp2,temp3;
     int niz[SIZE],i;
+    int parniBrojevi = 0,neparniBrojevi = 0;
     printf("Unesite broj:");
     scanf("%d",&broj);
     temp = broj;
@@ -168,8 +169,22 @@ int main(){
     for(i = 0;i < brojCifara;i++){
         printf("%d",niz[i]);
     }
+    printf("\n");
     for(i = 0;i < brojCifara;i++){
-        
+        if(i % 2 == 0){
+            neparniBrojevi += niz[i];
+        }
+        else{
+            parniBrojevi += niz[i];
+        }
+    }
+    printf("Parni brojevi %d\nNeparni brojevi: %d\n", parniBrojevi,neparniBrojevi);
+
+    if(parniBrojevi == neparniBrojevi){
+        printf("Broj je savrsen\n");
+    }
+    else{
+        printf("Broj nije savrsen\n");
     }
 
     printf("\nBroj cifara je: %d\n",brojCifara);
