@@ -14,24 +14,39 @@
 #include<stdlib.h>
 
 int main(){
-    int i,j,n;
+    int i,j,n,m;
     printf("unesite n:");
-    scanf("%d",&n);
-    int matrica[n][n];
+    while(n != 2){
+        scanf("%d",&n);
+    }
+    printf("Unesite m:");
+    while(m > 10){
+        scanf("%d",&m);
+    }
+   
+    int matrica[n][m];
     printf("Uneiste matricu celih brojeva:\n");
     for(i = 0; i < n; i++){
-        for(j = 0; j < n; j++){
+        for(j = 0; j < m; j++){
             scanf("%d",&matrica[i][j]);
         }
-    }
 
+    }
+    printf("\n");
     for(i = 0; i < n; i++){
-        for(j = 0; j < n; j++){
+        if(i == 0){
+            printf("spratovi osoba:\n");
+        }
+        for(j = 0; j < m; j++){
             printf("%d ",matrica[i][j]);
         }
-        printf("\n");
+        printf("\n\n");
+        if(i < n-1){
+            printf("tezine tih osoba:\n");
+        }
+      
     }
 
 
-    return 0;
+return 0;
 }
