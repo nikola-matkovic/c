@@ -74,7 +74,9 @@ Novi Pazar, 26.6.2021. godine
 // na neparnim pozicijama. Primer: Broj 15345 je savršen jer je zbir 1+3+5-5+4
 // dok broj 12345 nije savršen jer 1+3+5/2+4.
 
+/*
 
+Njihov nacin 
 int obrnutiBroj(int broj){
     int obrnuti = 0;
     while(broj != 0){
@@ -116,6 +118,51 @@ int main(){
     scanf("%d",&broj);
     suma(broj);
      
+
+
+    return 0;
+}
+
+*/
+
+//Moja nacin
+
+#include<stdio.h>
+#include<stdlib.h>
+
+#define SIZE 100
+
+int main(){
+    int broj,temp,brojCifara = 0,temp2;
+    int niz[SIZE],i;
+    printf("Unesite broj:");
+    scanf("%d",&broj);
+    temp = broj;
+    temp2 = broj;
+    while(temp != 0){
+        temp = temp / 10;
+        brojCifara++;
+    }
+    int obrnutiBroj = 0;
+    while(temp2 != 0){
+        obrnutiBroj = (obrnutiBroj * 10) + (temp2 % 10);
+        temp2 = temp2 / 10;
+        return obrnutiBroj;
+
+    }
+    while(obrnutiBroj != 0){
+        obrnutiBroj = obrnutiBroj % 10;
+        for(i = 0;i < brojCifara;i++){
+            niz[i] = broj;
+        }
+        obrnutiBroj = obrnutiBroj / 10;
+    }
+    printf("Niz brojeva je:\n");
+    for(i = 0;i < brojCifara;i++){
+        printf("%d",niz[i]);
+    }
+
+    printf("Broj cifara je: %d\n",brojCifara);
 
 
     return 0;
