@@ -133,12 +133,13 @@ int main(){
 #define SIZE 100
 
 int main(){
-    int broj,temp,brojCifara = 0,temp2;
+    int broj,temp,brojCifara = 0,temp2,temp3;
     int niz[SIZE],i;
     printf("Unesite broj:");
     scanf("%d",&broj);
     temp = broj;
     temp2 = broj;
+   
     while(temp != 0){
         temp = temp / 10;
         brojCifara++;
@@ -147,22 +148,31 @@ int main(){
     while(temp2 != 0){
         obrnutiBroj = (obrnutiBroj * 10) + (temp2 % 10);
         temp2 = temp2 / 10;
-        return obrnutiBroj;
+    }
+    printf("Obrnuti broj je:%d\n", obrnutiBroj);
+    temp3 = obrnutiBroj;
+   
 
-    }
-    while(obrnutiBroj != 0){
-        obrnutiBroj = obrnutiBroj % 10;
+     
         for(i = 0;i < brojCifara;i++){
-            niz[i] = broj;
+        obrnutiBroj = obrnutiBroj % 10;
+        niz[i] = obrnutiBroj;
+        temp3 = temp3 / 10;
+        obrnutiBroj = temp3;
         }
-        obrnutiBroj = obrnutiBroj / 10;
-    }
+        
+        
+
     printf("Niz brojeva je:\n");
+    // printf("%d\n", niz[0]);
+    // printf("%d\n", niz[1]);
+    // printf("%d\n", niz[2]);
+
     for(i = 0;i < brojCifara;i++){
         printf("%d",niz[i]);
     }
 
-    printf("Broj cifara je: %d\n",brojCifara);
+    printf("\nBroj cifara je: %d\n",brojCifara);
 
 
     return 0;
