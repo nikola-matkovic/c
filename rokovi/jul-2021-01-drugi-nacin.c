@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-#define SIZE 100
+#define SIZE 10
 
 int main(){
     int broj,temp,brojCifara = 0,temp2,temp3;
