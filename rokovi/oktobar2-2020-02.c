@@ -5,7 +5,24 @@
 #include<stdio.h>
 #include<stdlib.h>
 
+#define SIZE 100
+
+typedef struct automobil{
+    char marka[30];
+    int cena;
+}AUTOMOBIL;
+
+void ceneAutomobila(int niz[SIZE],int budzet,int duzina){
+    int i;
+    struct automobil Automobili[SIZE];
+    for(i = 0;i < duzina;i++){
+        scanf("%s %d",Automobili[i].marka,&Automobili[i].cena);
+         printf("%s : %d eura\n",Automobili[i].marka,Automobili[i].cena);
+    }
+   
+}
+
 int main(){
-    
+
     return 0;
 }
