@@ -28,6 +28,10 @@
 // Kamberović 7,38
 
 // Broj studenata na studijskom programu: 39 Prosečna ocena studenata: 7.87
+#include<stdio.h>
+#include<stdlib.h>
+
+#define SIZE 100
 
 typedef struct student{
     char ime[20];
@@ -40,11 +44,28 @@ typedef struct student{
 
 }STUDENT;
 
-#include<stdio.h>
-#include<stdlib.h>
+
 
 int main(){
     FILE *DUNP;
+    int i = 0,j;
+    struct student Studenti[SIZE];
+    DUNP = fopen("dunp.txt", "r");
+    if(DUNP == NULL){
+        printf("Greska");
+        exit(1);
+    }
+   while(!feof(DUNP)){
+    
+    fscanf(DUNP,"%s %s %s %s %d %d %f",Studenti[i].ime,Studenti[i].prezime,Studenti[i].departman,Studenti[i].studijskiProgram,&Studenti[i].godinaStudija,&Studenti[i].brojIndeksa,&Studenti[i].prosek);
+    i++;
+
+   }
+   for(j = 0;j < i;j++){
+    printf("Departman:%s Studijski program: %s Godina studija:%d \nBROJ INDEKSA:%d \nnIME: %s \nPREZIME: %s \nPROSEK: %f ",Studenti[i].departman, Studenti[i].studijskiProgram,Studenti[i].godinaStudija,Studenti[i].brojIndeksa,Studenti[i].ime,Studenti[i].prezime,Studenti[i].prosek);
+   } 
+    
+
     
     return 0;
 }
