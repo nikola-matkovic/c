@@ -33,11 +33,13 @@ Prof. dr Bratislav Mirić
 #include<stdlib.h>
 #include<math.h>
 
+#define SIZE 100
+
 int main(){
     int m = 0,n = 0;
     int i;
     int s = 0;
-    int niz1[m],niz2[n];
+    int niz1[SIZE],niz2[SIZE];
     printf("Uneiste m:");
     while(m <= 0){
         scanf("%d",&m);
@@ -60,21 +62,25 @@ int main(){
     printf("Zamenili smo m i n pa je sada m: %d ,n: %d",m,n);
 
     //Suma kvadratnih korena od m do n
-    if(m < n){
+    if(n > m){
+       
     for(m = m;m < n;m++){
+        niz2[m] = m;
         if(m % 2 == 1){
-            s+=sqrt(niz1[m]);
+           s+=sqrt(niz2[m]); 
         }
     }
     }
     if(m > n){
+    
     for(n = n;n < m;n++){
+        niz1[n] = n;
         if(n % 2 == 1){
-            s+=sqrt(niz2[n]);
+            s+=sqrt(niz1[n]);
         }
     }
     }
-   
+   printf("\nSuma kvadratnih korena od m do n je:%d",s);
 
     return 0;
 }
