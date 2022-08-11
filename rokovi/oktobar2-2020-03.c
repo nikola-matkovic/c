@@ -31,8 +31,25 @@ int main(){
         int i = 0;
         fscanf(stanovi,"%d,%d,%d,%d",&Stanovi[i].brojStana,&Stanovi[i].povrsina,&Stanovi[i].cena,&Stanovi[i].brojSoba);
         i++;
+       
     }
+    // for(int i = 0;i < 3;i++){
+    //     printf("%d,%d,%d,%d",Stanovi[i].brojStana,Stanovi[i].povrsina,Stanovi[i].cena,Stanovi[i].brojSoba);
+    // }
+
+    // int c = fgetc(stanovi);
+
+    // while(c != EOF) {
+    //     printf("%d",c);
+    //     c = fgetc(stanovi);
+    // }
+
     
+       
+        
+    
+    
+
 
     
     return 0;
