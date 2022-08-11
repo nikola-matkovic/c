@@ -60,9 +60,10 @@ int main(){
     i++;
 
    }
-   fclose(DUNP);
+   
+
    DUNP = fopen("dunp.txt" ,"w");
-   for(j = 0;j < i;j++){
+   for(j = 0;j < 3;j++){
     fprintf(DUNP,"Departman:%s Studijski program: %s Godina studija:%s \nBROJ INDEKSA:%d \nIME: %s \nPREZIME: %s \nPROSEK: %f ",Studenti[i].departman, Studenti[i].studijskiProgram,Studenti[i].godinaStudija,Studenti[i].brojIndeksa,Studenti[i].ime,Studenti[i].prezime,Studenti[i].prosek);
    } 
     
