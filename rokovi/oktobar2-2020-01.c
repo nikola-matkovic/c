@@ -31,9 +31,13 @@ Prof. dr Bratislav Mirić
 
 #include<stdio.h>
 #include<stdlib.h>
+#include<math.h>
 
 int main(){
     int m = 0,n = 0;
+    int i;
+    int s = 0;
+    int niz1[m],niz2[n];
     printf("Uneiste m:");
     while(m <= 0){
         scanf("%d",&m);
@@ -54,6 +58,23 @@ int main(){
         m = m ^ n;
     }
     printf("Zamenili smo m i n pa je sada m: %d ,n: %d",m,n);
+
+    //Suma kvadratnih korena od m do n
+    if(m < n){
+    for(m = m;m < n;m++){
+        if(m % 2 == 1){
+            s+=sqrt(niz1[m]);
+        }
+    }
+    }
+    if(m > n){
+    for(n = n;n < m;n++){
+        if(n % 2 == 1){
+            s+=sqrt(niz2[n]);
+        }
+    }
+    }
+   
 
     return 0;
 }
