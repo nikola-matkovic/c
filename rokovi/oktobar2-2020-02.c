@@ -14,10 +14,11 @@ typedef struct automobil{
 
 void ceneAutomobila(int budzet,int duzina){
     int i;
-    int kojiAuto = 0;
+    int kojiAuto[SIZE];
     int suma = 0;
     int kolikoAutaSamKupio;
     int kolikoParaJeOstalo;
+    int kolikoAuta;
     struct automobil Automobili[SIZE];
     printf("Unesite marku i cenu auta:");
     for(i = 1;i <= duzina;i++){
@@ -29,20 +30,26 @@ void ceneAutomobila(int budzet,int duzina){
         
         printf("%d.%s : %d eura\n",i,Automobili[i].marka,Automobili[i].cena);
     }
-     printf("Izaverite automobil:");
-     while(kojiAuto == 'N'){
-        scanf("%d",&kojiAuto);
+    printf("Koliko cete auta uzeti:");
+    scanf("%d",&kolikoAuta);
+    printf("Izaverite automobil:");
+    for(int j = 0;j < kolikoAuta;j++){
+        scanf("%d",kojiAuto);
      }
+      for(int j = 0;j < kolikoAuta;j++){
+        printf("%d\n",kojiAuto[i]);
+     }
+   
      for(i = 1;i <= duzina;i++){
-        for(int j = 1;j <= kojiAuto;j++){
-            if(suma <= budzet){
-                suma+= Automobili[j].cena;
-                kolikoAutaSamKupio++;
+            if(kojiAuto[i] == i){
+                suma += Automobili[i].cena;
+                printf("Suma:%d",suma);
+                
             }
         }
-    }
+    
     kolikoParaJeOstalo = budzet - suma;
-    printf("Kupio sam %d auta i ostalo mi je %d eura",kolikoAutaSamKupio,kolikoParaJeOstalo);
+    printf("Kupio sam %d auta i ostalo mi je %d eura",kolikoAuta,kolikoParaJeOstalo);
 
    
 }
