@@ -38,7 +38,7 @@ typedef struct student{
     char prezime[20];
     char departman[30];
     char studijskiProgram[30];
-    int godinaStudija;
+    char godinaStudija[10];
     int brojIndeksa;
     float prosek;
 
@@ -57,12 +57,12 @@ int main(){
     }
    while(!feof(DUNP)){
     
-    fscanf(DUNP,"%s %s %s %s %d %d %f",Studenti[i].ime,Studenti[i].prezime,Studenti[i].departman,Studenti[i].studijskiProgram,&Studenti[i].godinaStudija,&Studenti[i].brojIndeksa,&Studenti[i].prosek);
+    fscanf(DUNP,"%s %s %s %s %s %d %f",Studenti[i].ime,Studenti[i].prezime,Studenti[i].departman,Studenti[i].studijskiProgram,Studenti[i].godinaStudija,&Studenti[i].brojIndeksa,&Studenti[i].prosek);
     i++;
 
    }
    for(j = 0;j < i;j++){
-    printf("Departman:%s Studijski program: %s Godina studija:%d \nBROJ INDEKSA:%d \nnIME: %s \nPREZIME: %s \nPROSEK: %f ",Studenti[i].departman, Studenti[i].studijskiProgram,Studenti[i].godinaStudija,Studenti[i].brojIndeksa,Studenti[i].ime,Studenti[i].prezime,Studenti[i].prosek);
+    printf("Departman:%s Studijski program: %s Godina studija:%s \nBROJ INDEKSA:%d \nnIME: %s \nPREZIME: %s \nPROSEK: %f ",Studenti[i].departman, Studenti[i].studijskiProgram,Studenti[i].godinaStudija,Studenti[i].brojIndeksa,Studenti[i].ime,Studenti[i].prezime,Studenti[i].prosek);
    } 
     
 
