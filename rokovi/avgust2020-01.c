@@ -70,27 +70,36 @@ int main(){
     int niz[SIZE],i;
     bool zastava = true;
     
-    // printf("Unesite sumu S:");
-    // scanf("%d",&S);
+    printf("Unesite sumu S:");
+    scanf("%d",&S);
     printf("Unesite broj:");
     scanf("%d",&broj);
   
-    // while(S >= suma){
-    //     scanf("%d",&broj);
-    //     if(broj > 0 && broj % 1 == 0 && broj % broj == 0){
-    //         suma += broj;
-    //     }
-        
-    // }
+    while(S >= suma){
+        scanf("%d",&broj);
+        if(broj > 0 && broj % 1 == 0 && broj % broj == 0){
+            if(zastava == true){
+                suma += broj;
+            }
+        }
+    }
     if(broj == 0 || broj == 1){
         zastava = true;
     }
-    for(i = 2;i < broj;i++){
-       if(broj % i == 0){
+    while(i > broj){
+        i = 2;
+        if(broj % i == 0){
         zastava = false;
         break;
        }
-    }
+       i++;
+       }
+    // for(i = 2;i < broj;i++){
+    //    if(broj % i == 0){
+    //     zastava = false;
+    //     break;
+    //    }
+    // }
     if(zastava == true){
         printf("%d je prost",broj);
     }
