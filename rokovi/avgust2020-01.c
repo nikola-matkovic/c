@@ -69,6 +69,9 @@ int main(){
     int S = 0;
     int niz[SIZE],i;
     bool zastava = true;
+    int prostiBrojevi = 0;
+    int temp = 0;
+   
     
     printf("Unesite sumu S:");
     scanf("%d",&S);
@@ -77,12 +80,15 @@ int main(){
   
     while(S >= suma){
         scanf("%d",&broj);
-        if(broj > 0 && broj % 1 == 0 && broj % broj == 0){
-            if(zastava == true){
-                suma += broj;
-            }
+       if(zastava == true){
+        temp = broj;
+        niz[prostiBrojevi] = broj;
+        suma += broj;
+        prostiBrojevi++;
         }
     }
+  
+   
     if(broj == 0 || broj == 1){
         zastava = true;
     }
@@ -94,18 +100,44 @@ int main(){
        }
        i++;
        }
+  
+        printf("Prosti brojevi su:");
+         if(zastava == true){
+          printf("%d ",temp);
+        }
+    for(i = 0;i < prostiBrojevi + 1; i++){
+        if(zastava == true){
+            if(niz[i] == 0){
+                break;
+            }
+            printf("%d ",niz[i]);
+        }
+    }
+    printf("\nIma %d prostih brojeva",prostiBrojevi);
+
+
     // for(i = 2;i < broj;i++){
     //    if(broj % i == 0){
     //     zastava = false;
     //     break;
     //    }
     // }
-    if(zastava == true){
-        printf("%d je prost",broj);
-    }
-    else{
-        printf("%d nije prost",broj);
-    }
+    
+    // if(zastava == true){
+    //     printf("%d je prost",broj);
+    // }
+    // else{
+    //     printf("%d nije prost",broj);
+    // }
+    // while(zastava == true && i < prostiBrojevi){
+    //     i = 2;
+    //     niz[i] = broj;
+    //     printf("%d,",niz[i]);
+    //     i++;
+    // }
+    
+   
+    
     
 
 
