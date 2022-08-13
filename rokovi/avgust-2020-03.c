@@ -9,7 +9,14 @@
 #include<stdio.h>
 #include<stdlib.h>
 
+typedef struct parcela{
+    char nazv[30];
+    int x;
+    int y;
+}PARCELA;
+
 int main(){
-    
+    FILE *datoteka;
+    datoteka = fopen("parcele.txt", "r");
     return 0;
 }
