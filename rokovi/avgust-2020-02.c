@@ -21,7 +21,9 @@ int main(){
     for(i = 0;i < m;i++){
         for(j = i;j < m;j++){
             if(i != j){
-                
+                temp = matrica[i][j];
+                matrica[i][j] = temp;
+                matrica[j][i] = temp;
             }
         }
     }
