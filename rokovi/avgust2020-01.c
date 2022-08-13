@@ -59,6 +59,7 @@ Novi Pazar, 20.08.2020. god.
 
 #include<stdio.h>
 #include<stdlib.h>
+#include<stdbool.h>
 
 #define SIZE 100
 
@@ -67,10 +68,13 @@ int main(){
     int suma = 0;
     int S = 0;
     int niz[SIZE],i;
+    bool zastava = true;
+    
     // printf("Unesite sumu S:");
     // scanf("%d",&S);
     printf("Unesite broj:");
     scanf("%d",&broj);
+  
     // while(S >= suma){
     //     scanf("%d",&broj);
     //     if(broj > 0 && broj % 1 == 0 && broj % broj == 0){
@@ -78,13 +82,20 @@ int main(){
     //     }
         
     // }
-    for(i = 0;i < broj;i++){
-        if(broj > 0 && broj % 1 == 0 && broj % broj == 0 && broj % niz[i] > 0){
-            printf("Broj je prost");
-        }
-        else if(broj > 0 && broj % 2 == 0 || broj % niz[i] == 0){
-            printf("Broj nije prost");
-        }
+    if(broj == 0 || broj == 1){
+        zastava = true;
+    }
+    for(i = 2;i < broj;i++){
+       if(broj % i == 0){
+        zastava = false;
+        break;
+       }
+    }
+    if(zastava == true){
+        printf("%d je prost",broj);
+    }
+    else{
+        printf("%d nije prost",broj);
     }
     
 
