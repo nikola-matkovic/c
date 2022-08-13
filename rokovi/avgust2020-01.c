@@ -60,16 +60,34 @@ Novi Pazar, 20.08.2020. god.
 #include<stdio.h>
 #include<stdlib.h>
 
+#define SIZE 100
+
 int main(){
     int broj;
+    int suma = 0;
+    int S = 0;
+    int niz[SIZE],i;
+    // printf("Unesite sumu S:");
+    // scanf("%d",&S);
     printf("Unesite broj:");
     scanf("%d",&broj);
-    if(broj > 0){
-        printf("Broj je prost");
-    }
-    else{
-        printf("Broj nije prost");
+    // while(S >= suma){
+    //     scanf("%d",&broj);
+    //     if(broj > 0 && broj % 1 == 0 && broj % broj == 0){
+    //         suma += broj;
+    //     }
+        
+    // }
+    for(i = 0;i < broj;i++){
+        if(broj > 0 && broj % 1 == 0 && broj % broj == 0 && broj % niz[i] > 0){
+            printf("Broj je prost");
+        }
+        else if(broj > 0 && broj % 2 == 0 || broj % niz[i] == 0){
+            printf("Broj nije prost");
+        }
     }
     
+
+
     return 0;
 }
