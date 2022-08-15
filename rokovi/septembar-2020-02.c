@@ -24,6 +24,28 @@ void ispis(int matrix[SIZE][SIZE],int n){
     }
 }
 
+int suma(int matrix[SIZE][SIZE],int n){
+    int suma = 0;
+    int maks = 0;
+    int min = matrix[n-1][n-1];
+    for(int i = 0; i < n; i++){
+        for(int j = 0; j < n; j++){
+            if(i + j >= n){
+                if(matrix[i][j] > maks){
+                    maks = matrix[i][j];
+                }
+                if(matrix[i][j] < min){
+                    min = matrix[i][j];
+                }
+            }
+        }
+    }
+    printf("maks: %d\n",maks);
+    printf("min: %d\n",min);
+    suma = maks + min;
+    return suma;
+}
+
 int main(){
     int X[SIZE][SIZE];
     int n;
@@ -33,6 +55,9 @@ int main(){
     unos(X,n);
     printf("Uneta matrica:\n");
     ispis(X,n);
+    printf("Suma najmanjeg i najveceg ispod sporedne dijagonale je:%d",suma(X,n));
+
+    
     
 
     return 0;
