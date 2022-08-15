@@ -13,8 +13,11 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-int main(){
+int main(){                                                                          
     int i,j,n,m;
+    int sprat;
+    int osoba;
+    int kolikoOsoba;
     printf("unesite n:");
     while(n != 2){
         scanf("%d",&n);
@@ -32,6 +35,22 @@ int main(){
         }
 
     }
+    //Iskrcavanje osoba
+    printf("Unesite sprat:");
+    scanf("%d",&sprat);
+    osoba = m;
+    printf("Unesite koliko osoba ce te izbaciti:");
+    scanf("%d",&kolikoOsoba);
+    for(i = 0;i < n;i++){
+        for(j = 0; j < m; j++){
+            if(i == sprat){
+                matrica[sprat][osoba] = 0;
+                osoba--;
+            }
+        }
+    }
+
+
     printf("\n");
     for(i = 0; i < n; i++){
         if(i == 0){
