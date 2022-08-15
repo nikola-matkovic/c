@@ -1,13 +1,13 @@
-strana:20:1:400:20:500
-novokomponovana:100:1:200:80:500
-decija:5:1:100:200
-klasicna:1:1:200:250
-novokomponovana:100:2:200:80:500
-strana:10:2:400:20:500
-decija:3:2:100:200
-novokomponovana:120:3:200:80:500
-strana:28:3:400:20:500
-strana:12:4:400:20:500
-novokomponovana:80:4:200:80:500
-decija:8:4:100:200
-klasicna:3:4:200:250
+strana 20 1 400 20 500
+novokomponovana 100 1 200 80 500
+decija 5 1 100 200
+klasicna 1 1 200 250
+novokomponovana 100 2 200 80 500
+strana 10 2 400 20 500
+decija 3 2 100 200
+novokomponovana 120 3 200 80 500
+strana 28 3 400 20 500
+strana 12 4 400 20 500
+novokomponovana 80 4 200 80 500
+decija 8 4 100 200
+klasicna 3 4 200 250
