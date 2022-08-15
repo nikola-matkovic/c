@@ -1,4 +1,0 @@
-a ima povrsinu:7000ha
-b ima povrsinu:1ha
-c ima povrsinu:30a
-d ima povrsinu:480ha

@@ -72,18 +72,20 @@ int main(){
     scanf("%d",&n);
     while(abs(lnx) < pow(10,-6)){
     i = 2;
+    lnx = (x - 1);
     if(i % 2 == 0){
-        lnx += (x - 1) - pow((x-2),i) / i;
+        lnx -= pow((x-2),i) / i;
     }
     if(i % 2 == 1){
-        lnx -= (x - 1) - pow((x-2),i) / i;
+        lnx += (x - 1) - pow((x-2),i) / i;
     }
     i++;
     if(i == n - 1){
         lnx += pow((-1),n-1) * pow((x-1),n) / n;
     }
-
 }
+
+printf("Lnx je:%d",lnx);
     
         
         
