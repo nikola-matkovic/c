@@ -11,8 +11,10 @@
 #include<stdio.h>
 #include<stdlib.h>
 
+
 int main(){
     FILE *CD;
     fopen("cd.dat","r");
+    
     return 0;
 }
