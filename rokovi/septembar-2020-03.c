@@ -52,11 +52,26 @@ int main(){
         i++;
     }
     printf("Unesite inerval datuma: ");
-    int datum1, datum2;
-    scanf("%d", &datuma1);
-    scanf("%d", &datuma2);
+    int datum1, datum2, ukupnaZarada = 0;
+    scanf("%d", &datum1);
+    scanf("%d", &datum2);
 
-
+    for(int j=0; j<i; j++){
+        int cenaTrenutnog = diskovi[j].brojProdatihPrimeraka  * (diskovi[j].prodajnaCena - diskovi[j].cenaPoPrimerku);
+        //  if(strcmp(diskovi[j].zanr, "strana") == 0){
+        //     int porez = diskovi[j].carinaNaUkupnuKolicinu;
+        //     cenaTrenutnog += cenaTrenutnog * porez / 100;
+        //     ukupnaZarada += cenaTrenutnog;
+        // }
+        // else if(strcmp(diskovi[j].zanr, "novokomponovana") == 0){
+        //     int cenaTrenutnog = diskovi[j].prodajnaCena  * (diskovi[j].prodajnaCena - diskovi[j].cenaPoPrimerku);
+        // }
+        // else{
+        //     ukupnaZarada += diskovi[j].prodajnaCena  * (diskovi[j].prodajnaCena - diskovi[j].cenaPoPrimerku);
+        // }
+        ukupnaZarada += cenaTrenutnog;
+    }
+    printf("ukupna zarada: %d", ukupnaZarada);
     // for(int j = 0; j<i; j++){
     //     printf("%s ", diskovi[j].zanr);
     //     printf("%d ", diskovi[j].brojProdatihPrimeraka);
@@ -71,5 +86,6 @@ int main(){
     //     printf("%d ", diskovi[j].prodajnaCena);
     //     printf("\n");
     // }
+
     return 0;
 }
