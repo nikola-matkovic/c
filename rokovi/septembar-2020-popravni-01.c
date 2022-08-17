@@ -97,7 +97,7 @@ Prof. dr Bratislav Miné
 int main(){
     int a;
     int b;
-    int i;
+    int i,j;
     int brojcifara = 0,temp = 0;
     int temp2 = 0;
     int desetke = 1;
@@ -115,23 +115,29 @@ int main(){
     }
     int brCifaratmp = brojcifara;
     for(i = a;i < b;i++){
+        for(j = 0;j < b;j++){
+
         a = a / pow(10,brojcifara-1);
-        if(brojcifara < brCifaratmp){
+       if(brojcifara < brCifaratmp){
             a = a % (10 * desetke);
             desetke = 0;
             desetke += 10;
         }
-        if(i == a && temp2 % a == 0){
+       
+        if(j == a && temp2 % a == 0){
             flag = true;
         }
+       
         if(brojcifara == 1){
             break;
         }
         a = temp2;
         brojcifara--;
+        }
+       
     }
     if(flag == true){
-        for(i = a;i < b;i++){
+        for(i = 0;i < b;i++){
             printf("%d ",niz[i]);
         }
     }
