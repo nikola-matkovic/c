@@ -100,6 +100,7 @@ int main(){
     int i;
     int brojcifara = 0,temp = 0;
     int temp2 = 0;
+    int desetke = 1;
     bool flag = false;
     int niz[SIZE];
     printf("Unsite a:");
@@ -112,9 +113,14 @@ int main(){
         temp = temp / 10;
         brojcifara++;
     }
-
+    int brCifaratmp = brojcifara;
     for(i = a;i < b;i++){
         a = a / pow(10,brojcifara-1);
+        if(brojcifara < brCifaratmp){
+            a = a % (10 * desetke);
+            desetke = 0;
+            desetke += 10;
+        }
         if(i == a && temp2 % a == 0){
             flag = true;
         }
