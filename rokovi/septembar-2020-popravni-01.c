@@ -114,10 +114,10 @@ int main(){
         brojcifara++;
     }
     int brCifaratmp = brojcifara;
-    for(i = a;i < b;i++){
-       
 
-        a = a / pow(10,brojcifara-1);
+    //provera
+    for(i = a;i < b;i++){
+       a = a / pow(10,brojcifara-1);
        if(brojcifara < brCifaratmp){
             a = a % (10 * desetke);
             desetke = 0;
@@ -128,16 +128,13 @@ int main(){
             flag = true;
             }
         }
-       
-       
-        if(brojcifara == 1){
+       if(brojcifara == 1){
             break;
         }
         a = temp2;
         brojcifara--;
-        
-       
     }
+    //ispis
     if(flag == true){
         for(i = a;i < b;i++){
             printf("%d ",niz[i]);
