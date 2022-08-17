@@ -23,7 +23,8 @@ u nizu ocena u strukuturi.
 upisati u datoteku prosek.txt.*/
 
 #include <stdio.h>
-#include<stdlib.h>
+#include <stdlib.h>
+#include <string.h>
 
 #define MAX 30
 
@@ -57,7 +58,16 @@ int main(){
             s += studenti[i].ocene[j];
         }
         studenti[i].prosek = s / studenti[i].brojOcena;
-        printf("%f ", studenti[i].prosek);
+    }
+    FILE * prosek = fopen("prosek.txt", "w");
+    if(prosek == NULL){
+        printf("Greška 2");
+        exit(1);
+    }
+    fprintf(prosek, "%s \n", deparmtan );
+    fprintf(prosek, "Prezime \t Ime \t Broj_indeksa \t Prosek\n");
+    for(int i = 0; i < broj_studenata; i++){
+        fprintf(prosek, "%s \t %s \t %s \t %f\n", studenti[i].prezime,studenti[i].ime,studenti[i].brojIndeksa,studenti[i].prosek);
     }
     return 0;
 }

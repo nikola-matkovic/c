@@ -1,0 +1,4 @@
+matematika 
+Prezime 	 Ime 	 Broj_indeksa 	 Prosek
+mujović 	 edita 	 8/2016 	 8.000000
+Korać 	 jasmina 	 6/2017 	 10.000000
