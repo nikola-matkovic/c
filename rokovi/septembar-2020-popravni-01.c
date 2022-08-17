@@ -85,4 +85,44 @@ Novi Pazar 01.09.2020. godine
 Prof. dr Bratislav Miné
 
 20
-*/
+*/  
+
+#include<stdio.h>
+#include<stdlib.h>
+#include<math.h>
+#include<stdbool.h>
+
+int main(){
+    int a;
+    int b;
+    int i;
+    int brojcifara = 0,temp = 0;
+    int temp2 = 0;
+    int flag = false;
+    printf("Unsite a:");
+    scanf("%d",&a);
+    printf("Unsite b:");
+    scanf("%d",&b);
+    temp = a;
+    temp2 = a;
+    while(temp != 0){
+        temp = temp / 10;
+        brojcifara++;
+    }
+
+    for(i = a;i < b;i++){
+        a = a / pow(10,brojcifara-1);
+        if(i == a && temp2 % a == 0){
+            flag = true;
+        }
+        if(brojcifara == 1){
+            break;
+        }
+        a = temp2;
+        brojcifara--;
+    }
+
+    
+    return 0;
+
+}
