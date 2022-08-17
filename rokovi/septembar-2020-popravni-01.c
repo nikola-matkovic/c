@@ -92,13 +92,16 @@ Prof. dr Bratislav Miné
 #include<math.h>
 #include<stdbool.h>
 
+#define SIZE 100
+
 int main(){
     int a;
     int b;
     int i;
     int brojcifara = 0,temp = 0;
     int temp2 = 0;
-    int flag = false;
+    bool flag = false;
+    int niz[SIZE];
     printf("Unsite a:");
     scanf("%d",&a);
     printf("Unsite b:");
@@ -120,6 +123,11 @@ int main(){
         }
         a = temp2;
         brojcifara--;
+    }
+    if(flag == true){
+        for(i = a;i < b;i++){
+            printf("%d ",niz[i]);
+        }
     }
 
     
