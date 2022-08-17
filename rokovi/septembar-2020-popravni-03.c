@@ -29,8 +29,8 @@ upisati u datoteku prosek.txt.*/
 
 typedef struct student{
     char ime[MAX];
-    char prezime[MAX]
-    char brojIndeksa[MAX]
+    char prezime[MAX];
+    char brojIndeksa[MAX];
     int ocene[MAX];
     int brojOcena; 
     float prosek;
@@ -45,16 +45,19 @@ int main(){
     char deparmtan[MAX];
     fscanf(ulaz, "%s", deparmtan);
     int broj_studenata;
-    fscanf(ulaz, "%d", broj_studenata);
+    fscanf(ulaz, "%d", &broj_studenata);
     STUDENT studenti[MAX];
     for(int i = 0; i < broj_studenata; i++){
+        int s = 0;
         fscanf(ulaz,"%s %s %s", studenti[i].prezime,studenti[i].ime, studenti[i].brojIndeksa);
-        int brojOcena;
-        fscanf(ulaz, "%d", studenti[i].brojOcena);
-        for(int j = 0; j < studenat[i].brojOcena; j++){
+        fscanf(ulaz, "%d", &studenti[i].brojOcena);
+        for(int j = 0; j < studenti[i].brojOcena; j++){
             int temp;
-            fscanf(ulaz,"%d %d", &temp, studenti[i].ocene[j];
+            fscanf(ulaz,"%d %d", &temp, &studenti[i].ocene[j]);
+            s += studenti[i].ocene[j];
         }
+        studenti[i].prosek = s / studenti[i].brojOcena;
+        printf("%f ", studenti[i].prosek);
     }
     return 0;
 }
