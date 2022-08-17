@@ -115,7 +115,7 @@ int main(){
     }
     int brCifaratmp = brojcifara;
     for(i = a;i < b;i++){
-        for(j = 0;j < b;j++){
+       
 
         a = a / pow(10,brojcifara-1);
        if(brojcifara < brCifaratmp){
@@ -123,21 +123,23 @@ int main(){
             desetke = 0;
             desetke += 10;
         }
-       
-        if(j == a && temp2 % a == 0){
+        for(j = 0;j < b;j++){
+            if(j == a && temp2 % a == 0){
             flag = true;
+            }
         }
+       
        
         if(brojcifara == 1){
             break;
         }
         a = temp2;
         brojcifara--;
-        }
+        
        
     }
     if(flag == true){
-        for(i = 0;i < b;i++){
+        for(i = a;i < b;i++){
             printf("%d ",niz[i]);
         }
     }
