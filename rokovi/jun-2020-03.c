@@ -33,8 +33,8 @@ int main(){
     while(!feof(teniseri)){
        
         fscanf(teniseri,"%s %s %d %d",Teniseri[i].ime,Teniseri[i].prezime,&Teniseri[i].sifraIgraca,&Teniseri[i].brojPoenaNaATPListi);
+        i++;
     }
-
     for(int j = 0;j < i;j++){
         printf("%s %s %d %d\n",Teniseri[j].ime,Teniseri[j].prezime,Teniseri[j].sifraIgraca,Teniseri[j].brojPoenaNaATPListi);
     }

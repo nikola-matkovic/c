@@ -1,0 +1,3 @@
+Novak Djokovic 1 100
+Roger Federer 2 70
+Rafael Nadal 3 75
