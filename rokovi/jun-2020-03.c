@@ -21,6 +21,7 @@ typedef struct teniser{
     int brojPoenaNaATPListi;
     int brojPoenaKojeBrani;
     int brojOsvojenihPoena;
+    int ukupanBrojPoena;
 }TENISER;
 
 int main(){
@@ -59,7 +60,13 @@ int main(){
         printf("Greska3");
         exit(1);
     }
-    
+    fprintf(atplista,"IME PREZIME SIFRA UKUPAN_BROJ_POENA\n");
+    i = 0;
+    while(!feof(teniseri) && !feof(wimbeldon)){
+        Teniseri[i].ukupanBrojPoena = Teniseri[i].brojPoenaNaATPListi - Teniseri[i].brojPoenaKojeBrani + Teniseri[i].brojOsvojenihPoena;
+        fprintf(atplista,"%s %s %d %d",Teniseri[i].ime,Teniseri[i].prezime,Teniseri[i].sifraIgraca,Teniseri[i].ukupanBrojPoena);
+        
+    }
 
     return 0;
 }
