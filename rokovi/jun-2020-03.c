@@ -24,12 +24,12 @@ typedef struct teniser{
 }TENISER;
 
 int main(){
-    FILE *teniseri,*wimbeldon;
+    FILE *teniseri,*wimbeldon,*atplista;
     int i = 0;
    
     teniseri = fopen("teniseri.txt", "r");
     if(teniseri == NULL){
-        printf("Greska");
+        printf("Greska1");
         exit(1);
     }
     struct teniser Teniseri[SIZE];
@@ -43,7 +43,7 @@ int main(){
     }
     wimbeldon = fopen("wimbeldon.txt","r");
     if(wimbeldon == NULL){
-        printf("Greska");
+        printf("Greska2");
         exit(1);
     }
     i = 0;
@@ -53,6 +53,11 @@ int main(){
     }
     for(int j = 0;j < i;j++){
         printf("%d %d %d\n",Teniseri[j].sifraIgraca,Teniseri[j].brojPoenaKojeBrani,Teniseri[j].brojOsvojenihPoena);
+    }
+    atplista = fopen("atplista.txt","w");
+    if(atplista == NULL){
+        printf("Greska3");
+        exit(1);
     }
     
 
