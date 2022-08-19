@@ -8,3 +8,36 @@
 // svakog tenisera upiše novi broj poena po formatu kao u prvoj ulaznoj datoteci. Novi broj poena se dobija tako
 // što se od starog broja poena na ATP listi oduzme broj poena koje teniser brani, a zatim doda broj poena koje je
 // teniser osvojio na turniru
+
+#include<stdio.h>
+#include<stdlib.h>
+
+#define SIZE 100
+
+typedef struct teniser{
+    char ime[30];
+    char prezime[30];
+    int sifraIgraca;
+    int brojPoenaNaATPListi;
+}TENISER;
+
+int main(){
+    FILE *teniseri;
+    int i = 0;
+    teniseri = fopen("teniseri.txt", "r");
+    if(teniseri == NULL){
+        printf("Greska");
+        exit(1);
+    }
+    struct teniser Teniseri[SIZE];
+    while(!feof(teniseri)){
+       
+        fscanf(teniseri,"%s %s %d %d",Teniseri[i].ime,Teniseri[i].prezime,&Teniseri[i].sifraIgraca,&Teniseri[i].brojPoenaNaATPListi);
+    }
+
+    for(int j = 0;j < i;j++){
+        printf("%s %s %d %d\n",Teniseri[j].ime,Teniseri[j].prezime,Teniseri[j].sifraIgraca,Teniseri[j].brojPoenaNaATPListi);
+    }
+
+    return 0;
+}
