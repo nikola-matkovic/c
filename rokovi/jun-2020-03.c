@@ -19,11 +19,14 @@ typedef struct teniser{
     char prezime[30];
     int sifraIgraca;
     int brojPoenaNaATPListi;
+    int brojPoenaKojeBrani;
+    int brojOsvojenihPoena;
 }TENISER;
 
 int main(){
-    FILE *teniseri;
+    FILE *teniseri,*wimbeldon;
     int i = 0;
+   
     teniseri = fopen("teniseri.txt", "r");
     if(teniseri == NULL){
         printf("Greska");
@@ -37,6 +40,19 @@ int main(){
     }
     for(int j = 0;j < i;j++){
         printf("%s %s %d %d\n",Teniseri[j].ime,Teniseri[j].prezime,Teniseri[j].sifraIgraca,Teniseri[j].brojPoenaNaATPListi);
+    }
+    wimbeldon = fopen("wimbeldon.txt","r");
+    if(wimbeldon == NULL){
+        printf("Greska");
+        exit(1);
+    }
+    i = 0;
+    while(!feof(wimbeldon)){
+        fscanf(wimbeldon,"%d %d %d",&Teniseri[i].sifraIgraca,&Teniseri[i].brojPoenaKojeBrani,&Teniseri[i].brojOsvojenihPoena);
+        i++;
+    }
+      for(int j = 0;j < i;j++){
+        printf("%d %d %d\n",Teniseri[j].sifraIgraca,Teniseri[j].brojPoenaKojeBrani,Teniseri[j].brojOsvojenihPoena);
     }
 
     return 0;
