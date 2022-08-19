@@ -51,9 +51,10 @@ int main(){
         fscanf(wimbeldon,"%d %d %d",&Teniseri[i].sifraIgraca,&Teniseri[i].brojPoenaKojeBrani,&Teniseri[i].brojOsvojenihPoena);
         i++;
     }
-      for(int j = 0;j < i;j++){
+    for(int j = 0;j < i;j++){
         printf("%d %d %d\n",Teniseri[j].sifraIgraca,Teniseri[j].brojPoenaKojeBrani,Teniseri[j].brojOsvojenihPoena);
     }
+    
 
     return 0;
 }
