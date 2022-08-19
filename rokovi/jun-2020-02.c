@@ -68,45 +68,9 @@ void umetanje(int niz[SIZE],int n,int b){
     n+=1;
     for(int i = n  - 1;i >= pozicijaElemena;i--){
         niz[i] = niz[i - 1];
-        
     }
     niz[pozicijaElemena - 1] = b;
     niz[pozicijaElemena] = min;
-    
-
-//     niz[0] = temp2;
-//    temp3 = niz[n - 1];
-//     for(int i = 0; i < n; i++){
-      
-//       if(niz[i] == min){
-//         printf("niz[n - 1]= %d\n",niz[n - 1]);
-//         temp = min;
-//         min = niz[n - 1];
-//         niz[n - 1] = temp;
-        // if(min == temp3 && niz[n - 1] == temp2){
-        //     break;
-        // }
-         
-           
-        
-        // if(niz[i] == min){
-        //     temp = b;
-
-        // }
-    
-   
-
-
-// for(int i = 0;i < n;i++){
-//     for(int j = 0;j < n-1;j++){
-//         if(niz[j] > niz[j + 1]){
-//             temp = niz[j];
-//             niz[j] = niz[j + 1];
-//             niz[j + 1] = temp;
-//         }
-//     }
-// }
-   
 }
 
 int main(){
