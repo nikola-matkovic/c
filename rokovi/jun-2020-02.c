@@ -50,16 +50,20 @@ void ispis(int niz[SIZE],int n){
     for(int i = 0;i < n;i++){
         printf("%d ",niz[i]);
     }
-    printf("\n");
+  
 }
 
 void umetanje(int niz[SIZE],int n,int b){
     int min = niz[0];
-  
+    int temp2 = niz[n-1];
      for(int i = 0;i < n;i++){
         if(niz[i] < min){
             min = niz[i];
         }
+    }
+    n+=1;
+    for(int i = 0;i < n;i++){
+
     }
     for(int i = 0;i < n;i++){
     if(niz[i] == min){
@@ -70,16 +74,17 @@ void umetanje(int niz[SIZE],int n,int b){
     }
 }
 int temp;
+
   for(int i = 0;i < n-1;i++){
-    for(int j = 0;j < n-1-i;j++){
+    for(int j = 0;j < n-1;j++){
         if(niz[j] > niz[j + 1]){
             temp = niz[j];
             niz[j] = niz[j + 1];
             niz[j + 1] = temp;
         }
     }
-    }
-
+}
+   
 }
 
 int main(){
