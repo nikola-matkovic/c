@@ -15,7 +15,7 @@
 
 typedef struct student {
     char ime[20]; 
-    char prezime[20];
+    char prezime[20]
     int predavanja;
     int kolokvijum;
     int ispit;
@@ -55,6 +55,10 @@ int main(){
         }
         i++;
     }
+    fclose(ispiti);
+    fclose(pali);
+    fclose(polozili);
+
     printf("%d je prošlo ispit, a %d je palo", brojPolozenih, brojPalih);
     return 0;
 }
