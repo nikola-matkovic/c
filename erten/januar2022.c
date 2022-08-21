@@ -13,23 +13,27 @@
 
 int main(){
     int n;
-    int modul = 10;
-    int delilac = 1;
-    scanf("%d", &n);
-    int i = 1;
     while(1){
-        int cifra = n % modul / delilac;
-        modul = modul * 10;
-        delilac = delilac * 10;
-        if(cifra == i){
-            printf("%d ", cifra);
+        int modul = 10;
+        int delilac = 1;
+        scanf("%d", &n);
+        int i = 1;
+        int cifra;
+        int brojImaMagicnuCifru = 0; 
+        while(1){
+            cifra = n % modul / delilac;
+            modul = modul * 10;
+            delilac = delilac * 10;
+            if(cifra == i){
+                printf("%d ", cifra);
+                brojImaMagicnuCifru = 1;
+            }
+            i++;
+            if(n / delilac  == 0){
+                break;
+            }
         }
-        i++;
-
-
-
-
-        if(n / delilac  == 0){
+        if(brojImaMagicnuCifru == 0){
             break;
         }
     }
