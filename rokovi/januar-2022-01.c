@@ -52,29 +52,30 @@ Novi Pazar, 10.02.2022. godine
 #include<stdbool.h>
 
 int main(){
-    int i;
     int magicniBroj;
-    int brojCifara = 0;
-    int temp = magicniBroj;
-    int temp2 = magicniBroj;
-    bool flag = false;
-    printf("Unsite magicni broj:");
-    scanf("%d",&magicniBroj);
-    while(temp2 != 0){
-        i = 1;
-        temp = temp % 10;
-        if(temp == i){
-            flag = true;
+    while(1){
+        bool flag = false;
+        printf("Unsite magicni broj:");
+        scanf("%d",&magicniBroj);
+        int temp = magicniBroj;
+        int i = 1;
+        while(temp != 0){
+            if(temp % 10 == i){
+                if(flag == false){
+                    printf("broj %d ima magične cifre : %d ", magicniBroj, i);
+                    flag = true;
+                }
+                else{
+                    printf("%d ", i);
+                }
+            }
+            temp /= 10;
+            i++;
         }
-        temp2 = temp2 / 10;
-        temp = temp2;
-        i++;
+        printf("\n");
+        if(!flag){
+            break;
+        }
     }
-    
-    if(flag == true){
-        printf("%d jeste magican jer mu se cifra %d nalazi na istoj poziciji",magicniBroj,i);
-    }
-   
-    
     return 0;
 }
