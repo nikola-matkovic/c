@@ -13,19 +13,58 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include<stdbool.h>
 
 #define SIZE 100
 
 typedef struct vozac{
     char ime[30];
     char prezime[30];
-char nazivTima[30];
+    char nazivTima[30];
+    int bodovi;
+    int redniBroj;
+    bool daLiJeOdustao;
 }VOZAC;
 
 int main(){
-    FILE *vozaci;
+    FILE *vozaci,*trke;
+    int i = 0;
+    int br = 1;
+    char c;
     vozaci = fopen("vozaci.txt","r");
+    trke = fopen("trke.txt","w");
     struct vozac Vozaci[SIZE];
+    if(vozaci == NULL){
+        printf("Greska1");
+        exit(1);
+    }
+  
+    while(fscanf(vozaci,"%s,%s,%s",Vozaci[i].prezime,Vozaci[i].ime,Vozaci[i].nazivTima) == 1){
+        printf("%d.%s %s %s\n",i,Vozaci[i].prezime,Vozaci[i].ime,Vozaci[i].nazivTima);
+        i++;
+    }
+    // c = fgetc(vozaci);
+    // while(c != EOF){
+    //     fputc(c,trke);
+    //     c = fgetc(vozaci);
+    // }
+    i = 1;
+    Vozaci[i].daLiJeOdustao = true;
+    while(!feof(trke)){
+        Vozaci[i].redniBroj = i;
+        Vozaci[i+5].daLiJeOdustao = false;
+        if(Vozaci[i].daLiJeOdustao){
+            Vozaci[i].redniBroj = 0;
+        }
+        for(i = 1;i < 8;i++){
+            
+        }
+        fprintf(trke, "%d,%d",Vozaci[i].redniBroj,Vozaci[i].bodovi);
+       
+        i++;
+    }
+    fclose(vozaci);
+    fclose(trke);
 
 
     return 0;
