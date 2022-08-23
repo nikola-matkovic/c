@@ -27,6 +27,7 @@ typedef struct teniser{
 int main(){
     FILE *teniseri,*wimbeldon,*atplista;
     int i = 0;
+    char c[300];
    
     teniseri = fopen("teniseri.txt", "r");
     if(teniseri == NULL){
@@ -35,7 +36,8 @@ int main(){
     }
     struct teniser Teniseri[SIZE];
     while(!feof(teniseri)){
-       
+        fgets(c,300,teniseri);
+        fputs(c,atplista);
         fscanf(teniseri,"%s %s %d %d",Teniseri[i].ime,Teniseri[i].prezime,&Teniseri[i].sifraIgraca,&Teniseri[i].brojPoenaNaATPListi);
         i++;
     }
@@ -49,6 +51,8 @@ int main(){
     }
     i = 0;
     while(!feof(wimbeldon)){
+        fgets(c,300,wimbeldon);
+        fputs(c,atplista);
         fscanf(wimbeldon,"%d %d %d",&Teniseri[i].sifraIgraca,&Teniseri[i].brojPoenaKojeBrani,&Teniseri[i].brojOsvojenihPoena);
         i++;
     }
@@ -62,11 +66,20 @@ int main(){
     }
     fprintf(atplista,"IME PREZIME SIFRA UKUPAN_BROJ_POENA\n");
     i = 0;
-    while(!feof(teniseri) && !feof(wimbeldon)){
+    // while(!feof(teniseri)){
+    //     Teniseri[i].ukupanBrojPoena = Teniseri[i].brojPoenaNaATPListi - Teniseri[i].brojPoenaKojeBrani + Teniseri[i].brojOsvojenihPoena;
+    //     fprintf(atplista,"%s %s %d %d",Teniseri[i].ime,Teniseri[i].prezime,Teniseri[i].sifraIgraca,Teniseri[i].ukupanBrojPoena);
+    //     i++;
+    // }
+    while (!feof(wimbeldon)) {
+       
         Teniseri[i].ukupanBrojPoena = Teniseri[i].brojPoenaNaATPListi - Teniseri[i].brojPoenaKojeBrani + Teniseri[i].brojOsvojenihPoena;
-        fprintf(atplista,"%s %s %d %d",Teniseri[i].ime,Teniseri[i].prezime,Teniseri[i].sifraIgraca,Teniseri[i].ukupanBrojPoena);
-        
+        fprintf(atplista," %d %d",Teniseri[i].sifraIgraca,Teniseri[i].ukupanBrojPoena);
+        i++;
     }
+    fclose(teniseri);
+    fclose(wimbeldon);
+    fclose(atplista);
 
     return 0;
 }
