@@ -44,6 +44,6 @@ Novi Pazar, 26.03.2022. god.
 
 int main(){
     int i = 0,n = 20;
-    while()
+
     return 0;
 }
