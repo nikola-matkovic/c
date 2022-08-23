@@ -22,6 +22,7 @@ int main(){
         printf("Greska");
         exit(1);
     }
+
     while(!feof(stanovi)){
         int i = 0;
         fscanf(stanovi,"%d,%d,%d,%d",&Stanovi[i].brojStana,&Stanovi[i].povrsina,&Stanovi[i].cena,&Stanovi[i].brojSoba);
