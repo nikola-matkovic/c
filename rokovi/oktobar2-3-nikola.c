@@ -35,26 +35,27 @@ int main(){
     STAN stanovi[SIZE];
     int i = 0;
     while(!feof(stanovi_datoteka)){
-        fscanf(stanovi_datoteka, "%d %f %d %d %d",  &stan[i].broj_stana, &stan[i].povrsina, &stan[i].cena, &stan[i].broj_soba, &stan[i].je_li_slobodan);
-        printf("%d %f %d %d %d", stan[i].broj_stana, stan[i].povrsina, stan[i].cena, stan[i].broj_soba, stan[i].je_li_slobodan);
-        if(stan[i].je_li_slobodan){
-            fprintf(slobodni, "%d %f %d %d %d",  stan[i].broj_stana, stan[i].povrsina, stan[i].cena, stan[i].broj_soba, stan[i].je_li_slobodan);
+        fscanf(stanovi_datoteka, "%d %f %d %d %d",  &stanovi[i].broj_stana, &stanovi[i].povrsina, &stanovi[i].cena, &stanovi[i].broj_soba, &stanovi[i].je_li_slobodan);
+        printf("%d %f %d %d %d \n", stanovi[i].broj_stana, stanovi[i].povrsina, stanovi[i].cena, stanovi[i].broj_soba, stanovi[i].je_li_slobodan);
+        if(stanovi[i].je_li_slobodan){
+            fprintf(slobodni, "%d %f %d %d %d \n",  stanovi[i].broj_stana, stanovi[i].povrsina, stanovi[i].cena, stanovi[i].broj_soba, stanovi[i].je_li_slobodan);
         }
         i++;
     }
     int maksimalnaCena = 0;
+    int broj_soba = 0;
     printf("unesite maksimalnu cenu");
     scanf("%d", &maksimalnaCena);
     printf("unesite broj soba");
     scanf("%d", &broj_soba);
     bool postoji =  false;
     for(int j = 0; j < i; j++){
-        if(stan[j].broj_soba == broj_soba && stan[j].cena <= maksimalnaCena){
-            flag = true;
+        if(stanovi[j].broj_soba == broj_soba && stanovi[j].cena <= maksimalnaCena){
+            postoji = true;
             break;
         }
     }
-    if(flag){
+    if(postoji){
         printf("postoji stan za vas!");
     }
     else{
