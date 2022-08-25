@@ -85,6 +85,7 @@ int main(){
          }
          printf("%d ", diskovi[j].prodajnaCena);
          printf("\n");
+         printf("BOK\n");
      }
 
     return 0;
