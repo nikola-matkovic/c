@@ -4,6 +4,7 @@
 
 #include<stdio.h>
 #include<stdlib.h>
+#include<stdbool.h>
 
 #define SIZE 100
 int main(){
@@ -15,28 +16,36 @@ int main(){
     int temp = broj;
     int temp2 = broj;
     int temp3 = broj;
+    bool prviPut = false;
     while(temp2 != 0){
         temp2 /= 10;
         brojCifara++;
     }
-    while(1){
-        scanf("%d",&broj);
-        for(int i = 0;i < brojCifara;i++){
+    for(int i = 0;i < brojCifara;i++){
             temp = temp % 10;
             niz[i] = temp;
             temp3 = temp3 / 10;
             temp = temp3;
         }
-            for(int i = brojCifara-2;i >= 1;i--){
+        for(int i = brojCifara;i >= 0;i--){
+                if(niz[i] == 0){
+                continue;
+            }
                 if(niz[i] == niz[i - 1]){
-                    printf("%d",broj);
+                    if(prviPut == false){
+                        printf("%d",broj);
+                    }
+                    prviPut = true;
                 }
-                else{
+                if(prviPut){
                     break;
                 }
+                else if(niz[i] != niz[i - 1]){
+                    printf("\nUnsite ponovo broj:");
+                    scanf("%d",&broj);
+                }
+             
             }
-        
-
-    }
+ 
     return 0;
 }
