@@ -3,7 +3,7 @@ u svakoj liniji tekstualne datoteke CD.txt nalaze se podaci o prodaji Compact di
 linije se sastoje od više kolona međusobno razdvojenih dvotačkom.
 prvoj koloni se nalazi naziv žanra cd-a koji može biti Jedan od vrednosti: 
 inostrana novokomponovana dečija klasična.
-u drugoj kolonije zadat broj prodatih primeraka za tekuću prodaju.
+u drugoj koloni je zadat broj prodatih primeraka za tekuću prodaju.
 u trećoj koloni dat je datum prodaje u obliku rednog broja između 1 početni dan intervala prodaje i 30 dan obrade podataka.
 potom slede podaci o nabavnoj ceni.  ti podaci sa zastoje od cene po primerku,
 ali za inostranu muziku dodatno se zadaje i iznos carine po ukupnoj količini,
