@@ -52,11 +52,13 @@ int main(){
         }
         if(niz[i] == min){
             minPozicija = i;
+            
         }
         if(niz[i] == maks){
             maksPozicija = i;
         }
     }
+    printf("minpoz:%d\nmakspoz:%d",minPozicija,maksPozicija);
     for(i = 0;i < m;i++){
         for(j = 0;j < m;j++){
             A[i][minPozicija] = A[i][minPozicija] ^ A[i][maksPozicija];
@@ -67,7 +69,7 @@ int main(){
     printf("\nmaks:%d\n",maks);
       printf("\nmin:%d\n",min);
     
-    for(int k = 0;k < m;k++){
+    for(int k = 0;k < m;k++){ 
         printf("%d ",niz[k]);
     }
 
