@@ -1,9 +1,10 @@
 // 3. Napisati program koji na učitava datoteku DUNP DAT, koja sadrži podatke o studentima
-// Državnog univerziteta u Novom Pazaru i to broj indeksa, e, prime, departman, studijski
+// Državnog univerziteta u Novom Pazaru i to broj indeksa, ime, prime, departman, studijski
 // program, godina studija, prosek. Zatim se na standardnom izlazu ispisuju podaci o studentima
 // studijskog programa i godine koje korisnik unosi sa tastature i to u sledećem formatu:
+// Primer ako korisnik unese studijski program Softversko inženjerstvo i godinu studija prvu:
 
-// Primer ako korisnik unese studijski program Softversko inženjerstvo i godinu studija prvu: Departman: Tehničke nauke
+// Departman: Tehničke nauke
 
 // Studijski program: Softversko inženjerstvo Godina studija: prva
 
@@ -30,45 +31,63 @@
 // Broj studenata na studijskom programu: 39 Prosečna ocena studenata: 7.87
 #include<stdio.h>
 #include<stdlib.h>
+#include<stdbool.h>
+#include<string.h>
+
 #define SIZE 100
 
 typedef struct student{
-    char ime[20];
-    char prezime[20];
-    char departman[30];
-    char studijskiProgram[30];
-    char godinaStudija[10];
-    int brojIndeksa;
+    char index[10];
+    char ime[30];
+    char prezime[30];
+    char departman[50];
+    char smer[30];
+    char godina[10];
     float prosek;
-
 }STUDENT;
 
-
-
 int main(){
-    FILE *DUNP;
-    int i = 0,j;
-    struct student Studenti[SIZE];
-    DUNP = fopen("dunp.txt", "r");
-    if(DUNP == NULL){
-        printf("Greska");
+    FILE *dunp = fopen("DUNP.txt", "r");
+    if(dunp == NULL){
+        printf("greška 1");
         exit(1);
     }
-   while(!feof(DUNP)){
-    
-    fscanf(DUNP,"%s %s %s %s %s %d %f",Studenti[i].ime,Studenti[i].prezime,Studenti[i].departman,Studenti[i].studijskiProgram,Studenti[i].godinaStudija,&Studenti[i].brojIndeksa,&Studenti[i].prosek);
-    i++;
-
-   }
-   
-    FILE *ispis;
-    ispis = fopen("ispis.txt", "w");
-
-   for(j = 0;j < 3;j++){
-    fprintf(ispis,"Departman:%s Studijski program: %s Godina studija:%s \nBROJ INDEKSA:%d \nIME: %s \nPREZIME: %s \nPROSEK: %f ",Studenti[i].departman, Studenti[i].studijskiProgram,Studenti[i].godinaStudija,Studenti[i].brojIndeksa,Studenti[i].ime,Studenti[i].prezime,Studenti[i].prosek);
-   } 
-    
-
-    
+    int i = 0;
+    STUDENT studenti[SIZE];
+    char studijskiProgram[30];
+    char godina[10];
+    printf("unesite studijski prigram:");
+    scanf("%s", studijskiProgram);
+    printf("unesite godinu studija:");
+    scanf("%s", godina);
+    bool prviPut = true;
+    int sumaOcena = 0;
+    int brojStudenata = 0;
+    while(!feof(dunp)){
+        fscanf(dunp, "%s %s %s %s %s %s %f",  studenti[i].index, studenti[i].ime,studenti[i].prezime, studenti[i].departman, studenti[i].smer, studenti[i].godina, &studenti[i].prosek);
+        if(strcmp(studenti[i].smer, studijskiProgram ) == 0 && strcmp(studenti[i].godina, godina ) == 0 ){
+            if(prviPut){
+                printf("departman: %s ", studenti[i].departman);
+                printf("\n");
+                printf("studijski program: %s ", studenti[i].smer );
+                printf("\n");
+                printf("Godina studija: %s ", godina);
+                printf("\n");
+                printf("Spisak studenata: ");
+                printf("\n");
+                printf("BROJ INDEKSA \t IME \t PREZIME \t PROSEK ");
+                printf("\n");
+                prviPut = false;
+            }
+            brojStudenata++;
+            printf("%s \t %s \t %s \t %f \n", studenti[i].index, studenti[i].ime, studenti[i].prezime,  studenti[i].prosek);
+            sumaOcena += studenti[i].prosek;
+        }
+        i++;
+    }
+    float prosecnaOcena = sumaOcena / brojStudenata;
+    printf("broj studenata na studijskom programu:  %d ", brojStudenata);
+    printf("\n");
+    printf("Prosečna ocena studenata : %f ", prosecnaOcena);
     return 0;
 }
