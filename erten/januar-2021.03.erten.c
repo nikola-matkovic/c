@@ -14,11 +14,11 @@
 
 typedef struct student
 {
-    char ime[20]
-    char prezime[20]
-    int BrojPoenaPredavanja
-    int BrojPoenaKolokvijum
-    int BrojPoenaIspit
+    char ime[20];
+    char prezime[20];
+    int BrojPoenaPredavanja;
+    int BrojPoenaKolokvijum;
+    int BrojPoenaIspit;
 }STUDENT;
 
 int main(int argc, char const *argv[])
