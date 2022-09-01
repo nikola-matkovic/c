@@ -26,20 +26,20 @@ int main(int argc, char const *argv[])
     int polozili = 0;
     int pali = 0;
     FILE *ispiti = fopen("ispiti.txt", "r");
-    if{ispiti==NULL}{
-        printf{"Greska pri otvaranju fila"}
+    if(ispiti==NULL){
+        printf("Greska pri otvaranju fila");
         exit (1);
     }
 
         FILE *polozili = fopen("polozili.txt", "w");
-    if{polozili==NULL}{
-        printf{"Greska pri otvaranju fila"}
+    if(polozili==NULL){
+        printf("Greska pri otvaranju fila");
         exit (1);
     }
     
     FILE *NisuPolozili = fopen("NisuPolozili.txt", "w");
-    if{NisuPolozili==NULL}{
-        printf{"Greska pri otvaranju fila"}
+    if(NisuPolozili==NULL){
+        printf("Greska pri otvaranju fila");
         exit (1);
     }
     
@@ -47,8 +47,8 @@ int main(int argc, char const *argv[])
     STUDENT studenti[MAX];
     while(!feof (ispiti))
     {
-        fscanf(ispiti, "%s %s %d %d %d", studenti[i].ime, studenti[i].prezime, &studenti[i].BrojPoenaPredavanja, &studenti[i].BrojPoenaKolokvijusm, &studenti[i].BrojPoenaIspit);
-        int UkupnoPoena = studenti[i].BrojPoenaPredavanja + studenti[i].BrojPoenaKolokvijusm + studenti[i].BrojPoenaIspit;
+        fscanf(ispiti, "%s %s %d %d %d", studenti[i].ime, studenti[i].prezime, &studenti[i].BrojPoenaPredavanja, &studenti[i].BrojPoenaKolokvijum, &studenti[i].BrojPoenaIspit);
+        int UkupnoPoena = studenti[i].BrojPoenaPredavanja + studenti[i].BrojPoenaKolokvijum + studenti[i].BrojPoenaIspit;
         if (UkupnoPoena>50)
         {
             fprintf(polozili, "%s %s %d",studenti[i].ime, studenti[i].prezime, UkupnoPoena );
