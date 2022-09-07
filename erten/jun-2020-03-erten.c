@@ -12,7 +12,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define MAX[100]
+#define MAX 100
 
 int main(int argc, char const *argv[])
 {
@@ -26,22 +26,22 @@ int main(int argc, char const *argv[])
         int BrojOsvojenihPoena;
     }TENISERI;
     
-    FILE *atplista = fopen("atplista.txt", "w")
-    if (atplista == NULL)
+    FILE *atplista = fopen("atplista.txt", "w");
+    if (atplista == NULL);
     {
         printf("GRESKA PRI OTVARANJU");
         exit (1);
     } 
 
-    FILE *teniseri = fopen("teniseri.txt", "r")
-    if (teniseri == NULL)
+    FILE *teniseri = fopen("teniseri.txt", "r");
+    if (teniseri == NULL);
     {
         printf("GRESKA PRI OTVARANJU");
         exit (1);
     } 
 
-    FILE *wimblodn = fopen("wimbldon.txt", "r")
-    if (wimbldon == NULL)
+    FILE *wimbldon = fopen("wimbldon.txt", "r");
+    if (wimbldon == NULL);
     {
         printf("GRESKA PRI OTVARANJU");
         exit (1);
@@ -62,18 +62,18 @@ int main(int argc, char const *argv[])
     while (!feof(wimbldon))
     {
          fscanf(wimbldon, " %d" , &temp);
-         for (j = 0; j < i; j++)
+         for (int j = 0; j < i; j++)
          {
-            if (teniseri[j].SifraIgraca == temp)
+            if (teniseriniz[j].SifraIgraca == temp)
             {
-                fscanf((teniseri, "%d %d" , &teniseriniz[j].BrojPoenaKojihBrani,  &teniseriniz[j].BrojOsvojenihPoena))
+                fscanf(teniseri, "%d %d" , &teniseriniz[j].BrojPoenaKojihBrani,  &teniseriniz[j].BrojOsvojenihPoena);
             }
          }
          
     }
-    for (j = 0; j < i; j++)
+    for (int j = 0; j < i; j++)
     {
-        NoviBrojPoena = teniserniz[i].BrojPoena - teniseriniz[j].BrojPoenaKojihBrani +  teniseriniz[j].BrojOsvojenihPoena
+        NoviBrojPoena = teniseriniz[i].BrojPoena - teniseriniz[j].BrojPoenaKojihBrani +  teniseriniz[j].BrojOsvojenihPoena;
         fprintf(atplista, "%d %s %s %d \n" , teniseriniz[i].SifraIgraca, teniseriniz[i].Ime, teniseriniz[i].Prezime, NoviBrojPoena);
     }
 
