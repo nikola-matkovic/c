@@ -57,10 +57,10 @@ int main(){
     else if(o=2){
         printf("unesite  vrstu i kolonu  u kojoj želite izračunati minor");
         int niz3[n-1][n-1];
-        scanf(" %d %d", &h, &v );       // h ------      v|||||
+        scanf(" %d %d", &h, &v );       
         for(i=0; i<n-1; i++){
             for(j=0; j<n-1; j++){
-                if(h-1>i && v-1>j){           // h= 3            v=3       2>i      2>j
+                if(h-1>i && v-1>j){           
                     t=niz[i][j];
                 }
                 niz3[i][j]=t;
