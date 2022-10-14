@@ -27,7 +27,7 @@ void ceneAutomobila(int budzet,int duzina){
         
     }
    
-      for(i = 1;i <= duzina;i++){
+      for(i = 1;i <= duzina;i++)    {
         
         printf("%d.%s : %d eura\n",i,Automobili[i].marka,Automobili[i].cena);
     }

@@ -20,7 +20,7 @@ int main(){
     while(temp2 != 0){
         temp2 /= 10;
         brojCifara++;
-    }
+    }z
     for(int i = 0;i < brojCifara;i++){
             temp = temp % 10;
             niz[i] = temp;
