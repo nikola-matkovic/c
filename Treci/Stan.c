@@ -24,12 +24,12 @@ typedef struct stan {
 int main(){
     FILE * stanovi_datoteka = fopen ("stanovi.txt", "r");
     if(stanovi_datoteka == NULL){
-        printf("greška 1");
+        printf("greška pri otvaranju stanovi.txt");
         exit(1);
     }
     FILE * slobodni = fopen ("slobodni.txt", "w");
     if(slobodni == NULL){
-        printf("greška 2");
+        printf("greška pri otvaanju slobnodni.txt");
         exit(1);
     }
     STAN stanovi[SIZE];

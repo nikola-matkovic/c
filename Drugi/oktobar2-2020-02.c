@@ -27,7 +27,7 @@ void ceneAutomobila(int budzet,int duzina){
         
     }
    
-      for(i = 1;i <= duzina;i++){
+      for(i = 1;i <= duzina;i++)    {
         
         printf("%d.%s : %d eura\n",i,Automobili[i].marka,Automobili[i].cena);
     }
@@ -51,8 +51,6 @@ void ceneAutomobila(int budzet,int duzina){
     
     kolikoParaJeOstalo = budzet - suma;
     printf("Kupio sam %d auta i ostalo mi je %d eura",kolikoAuta,kolikoParaJeOstalo);
-
-   
 }
 
 int main(){
@@ -64,9 +62,5 @@ int main(){
     scanf("%d",&kolicinaUtomobila);
     // printf("Izaberite automobil:");
     ceneAutomobila(budzet,kolicinaUtomobila);
-    
-  
-
-
     return 0;
 }
