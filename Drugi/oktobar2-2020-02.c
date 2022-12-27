@@ -1,6 +1,7 @@
-// 2. Napisati funkciju koja će kao argumente imati niz koji predstavlja cene automobila
-// (5-ti element za predstavlja cenu i-tog automobila), dužinu nira i bullet. Funkcija treba da vrati najveći
-// broj automobila koliko korisnik može da kupi sa prosledenim budhetom
+// 2. Napisati funkciju koja će kao argumente imati niz koji predstavlja cene automobila (i-ti element niza predstavlja cenu i-tog automobila), dužinu niza i budžet. Funkcija treba da vrati najveći broj automobila koliko korisnik može da kupi sa prosleđenim budžetom.
+// U main funkciji uneti broj automobila, cene automobila i budžet i ispisati koliko automobila može korisnik da kupi sa unetim budžetom.
+// Primer: ako je korisnik uneo N=5 i niz=[100.000,50.000,30.000,45.000,23.000], za budžet je uneo 100.000 – rezultat bi bio da korisnik može da kupi najviše 3 automobila sa ovim budžetom.
+//mart 2022
 
 #include<stdio.h>
 #include<stdlib.h>
@@ -26,7 +27,7 @@ void ceneAutomobila(int budzet,int duzina){
         
     }
    
-      for(i = 1;i <= duzina;i++){
+      for(i = 1;i <= duzina;i++)    {
         
         printf("%d.%s : %d eura\n",i,Automobili[i].marka,Automobili[i].cena);
     }
@@ -50,8 +51,6 @@ void ceneAutomobila(int budzet,int duzina){
     
     kolikoParaJeOstalo = budzet - suma;
     printf("Kupio sam %d auta i ostalo mi je %d eura",kolikoAuta,kolikoParaJeOstalo);
-
-   
 }
 
 int main(){
@@ -63,9 +62,5 @@ int main(){
     scanf("%d",&kolicinaUtomobila);
     // printf("Izaberite automobil:");
     ceneAutomobila(budzet,kolicinaUtomobila);
-    
-  
-
-
     return 0;
 }

@@ -1,4 +1,4 @@
-// 3. Formirana je datoteka VRATA DAT sa podacima o sastavu ulaznih vrata. 
+ // 3. Formirana je datoteka VRATA DAT sa podacima o sastavu ulaznih vrata. 
 // Svaki zapis sadrži informacije: šifra modela vrata, površinu vrata napravljenu od plastike,
 // površinu vrata napravljenu od drveta površinu vrata napravljenu od stakla. Unesite podatke 
 // o ceni kvadratnog metra plastike, drveta stakla sa standardnog ulaza. Pročitati datoteku i 
